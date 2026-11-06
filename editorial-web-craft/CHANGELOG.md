@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 — 2026-11-06
+
+- Six skill descriptions name HTML elements in plain words instead of angle-bracket tags, because claude.ai warns about tags and strips their brackets. No change in what the skills do.
+
 ## 1.0.3 — 2026-11-06
 
 - Fix: `inline-svg-decorator`'s `scripts/wave.py` crashed on Python 3.9 with a `TypeError` before producing any output. It now runs on Python 3.9 and later.

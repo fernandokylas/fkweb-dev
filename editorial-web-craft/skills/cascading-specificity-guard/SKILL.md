@@ -3,7 +3,7 @@ name: cascading-specificity-guard
 description: >-
   Structure stylesheets with CSS cascade layers — `@layer base, layout, components, utilities;` — so
   layout utilities (gap, margin, padding, alignment, display) always win over component styles without
-  `!important` or specificity hacks. Use this whenever writing a stylesheet or <style> block longer
+  `!important` or specificity hacks. Use this whenever writing a stylesheet or style block longer
   than a few rules, setting up CSS for a prototype/page/design system, adding utility classes, or
   debugging "my gap/margin/padding class isn't applying", "the component overrides my utility", "why
   do I need !important", "specificity war", or "CSS order matters". Also use when integrating third-

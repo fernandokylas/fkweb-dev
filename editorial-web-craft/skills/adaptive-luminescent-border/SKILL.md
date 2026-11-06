@@ -5,7 +5,7 @@ description: >-
   their ground — a debossed groove (dark hairline + light highlight) on paper, a 0.5px glowing semi-
   transparent fiber line on obsidian — built as a masked gradient stroke on a pseudo-element with a
   per-ground blend mode, plus fading hairline rules and gap-dividers for grids. Use this whenever
-  styling card edges, panel outlines, section dividers, <hr>, table rules, grid separators, sidebar
+  styling card edges, panel outlines, section dividers, hr elements, table rules, grid separators, sidebar
   boundaries, glass/frosted panels, or when the user says "the borders look cheap / flat / heavy",
   "premium edges", "subtle dividers", "glowing border", "gradient border", "glassmorphism", or asks
   for a card/panel design on a dark or mixed-ground page.

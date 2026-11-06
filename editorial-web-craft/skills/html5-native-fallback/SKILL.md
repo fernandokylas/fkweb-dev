@@ -2,8 +2,8 @@
 name: html5-native-fallback
 description: >-
   Build accordions, disclosures, modals, popovers, dropdowns, toggles, progress bars, and page
-  structure from native HTML5 elements — <details>/<summary>, <dialog>, the popover attribute,
-  <button>, <main>/<nav>/<aside>/<article> — instead of div-and-span components driven by JavaScript
+  structure from native HTML5 elements — details/summary, dialog, the popover attribute,
+  button, main/nav/aside/article — instead of div-and-span components driven by JavaScript
   state machines and hand-written ARIA. Use this whenever generating or reviewing HTML/JSX for any
   interactive component or page scaffold, and especially when the user asks for an accordion, FAQ,
   collapsible, expandable section, modal, dialog, drawer, dropdown, menu, tooltip, tabs, toggle, or

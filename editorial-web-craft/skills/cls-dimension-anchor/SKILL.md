@@ -5,7 +5,7 @@ description: >-
   aspect-ratio on images, video, iframes and embeds; min-height on async data regions, feeds, charts,
   ad slots and dashboards; font metric overrides so web-font swaps don't reflow; scrollbar-gutter;
   content-visibility with intrinsic size. Use this whenever generating or reviewing HTML/CSS that
-  includes <img>, <picture>, <video>, <iframe>, embeds, lazy-loaded sections, fetched data, charts,
+  includes img, picture, video or iframe elements, embeds, lazy-loaded sections, fetched data, charts,
   third-party widgets, web fonts, or cookie/promo banners — and whenever the user says "layout shift",
   "CLS", "the page jumps", "content moves when it loads", "Core Web Vitals", "Lighthouse", or "things
   pop in and push stuff down".

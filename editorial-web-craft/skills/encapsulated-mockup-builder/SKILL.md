@@ -2,8 +2,8 @@
 name: encapsulated-mockup-builder
 description: >-
   Build front-end prototypes, mockups, landing pages, dashboards, component demos, and interactive UI
-  concepts as ONE self-contained HTML file — a single <style> block in <head>, a single <script> block
-  before </body>, tokens in :root, and every icon/graphic/image embedded inline (SVG or data URI) so
+  concepts as ONE self-contained HTML file — a single style block in the head, a single script block
+  before the closing body tag, tokens in :root, and every icon/graphic/image embedded inline (SVG or data URI) so
   the file opens and works with zero external dependencies, bundlers, or missing assets. Use this
   whenever the user asks for a prototype, mockup, demo, "quick page", "something I can open in the
   browser", "show me what it'd look like", an artifact/preview, a design handoff, or any front-end

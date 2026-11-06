@@ -9,7 +9,7 @@ description: >-
   buttons/nav/lists, a hero or footer divider, background decoration, a placeholder logo,
   arrows/checks/chevrons, or when the user says "add an icon", "make a wave", "section divider",
   "decorative shape", "use SVG", "no icon library", or the design would otherwise reach for Font
-  Awesome / Lucide / an <img> that doesn't exist.
+  Awesome / Lucide / an image file that doesn't exist.
 ---
 
 # Inline SVG Decorator
