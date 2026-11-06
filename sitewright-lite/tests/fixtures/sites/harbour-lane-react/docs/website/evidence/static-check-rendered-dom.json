@@ -1,0 +1,151 @@
+{
+ "tool": "sw_site_check",
+ "tool_version": "2",
+ "target": "react-capture2",
+ "result": "passed",
+ "findings": [
+  {
+   "check_id": "meta.basics",
+   "location": "404.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "no canonical link",
+   "action": "add one once the production URL is known"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "404.html:18",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  },
+  {
+   "check_id": "meta.basics",
+   "location": "index.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "no canonical link",
+   "action": "add one once the production URL is known"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "index.html:12",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  }
+ ],
+ "diagnostics": [],
+ "checks": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "site.404",
+   "target": ".",
+   "result": "passed"
+  }
+ ],
+ "timestamp": "2026-10-06T17:57:21Z",
+ "duration_ms": 3,
+ "capture_note": "react-capture2 was a scratch directory: the rendered DOM of / after React render (Playwright, chromium 154) plus dist/404.html and dist/assets from `npm run build` of a clean copy of this fixture's tracked files (Vite output index-TxHmr2aL.js, index-BPlrhG2_.css). The record binds src with the build inputs (index.html, public, package files, configs)."
+}

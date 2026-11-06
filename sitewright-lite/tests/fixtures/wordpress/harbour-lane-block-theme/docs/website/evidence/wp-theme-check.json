@@ -1,0 +1,274 @@
+{
+ "tool": "sw_wp_theme_check",
+ "tool_version": "2",
+ "target": "theme/harbour-lane",
+ "result": "passed",
+ "findings": [
+  {
+   "check_id": "wp.content-editable",
+   "location": "content/order.html:5",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "Custom HTML block: editors can change it only as code",
+   "action": "replace it with blocks, or a plugin block for forms, when one is chosen"
+  },
+  {
+   "check_id": "wp.assets",
+   "location": ".",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "no screenshot.png",
+   "action": "add a 1200\u00d7900 screenshot before distribution"
+  },
+  {
+   "check_id": "wp.runtime-content",
+   "location": "probe",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page 'order' has 1 Custom HTML block(s)",
+   "action": "editable only as code; see wp.content-editable"
+  }
+ ],
+ "diagnostics": [],
+ "checks": [
+  {
+   "check_id": "wp.assets",
+   "target": ".",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.assets",
+   "target": "functions.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/contact.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/home.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/menu.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/order.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "parts/footer.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "parts/header.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "patterns/not-found.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "templates/404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "templates/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "templates/page-no-title.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "templates/page.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/contact.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/home.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/menu.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/order.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/pages.json",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.patterns",
+   "target": "patterns/not-found.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "functions.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "patterns/not-found.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.runtime-content",
+   "target": "probe",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.runtime-templates",
+   "target": "probe",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.runtime-theme",
+   "target": "probe",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": ".",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "parts/footer.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "parts/header.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "patterns/not-found.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "templates/404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "templates/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "templates/page-no-title.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "templates/page.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.theme-header",
+   "target": "style.css",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.theme-json",
+   "target": "theme.json",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/contact.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/home.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/menu.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/order.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "parts/footer.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "parts/header.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "patterns/not-found.php",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "templates/404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "templates/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "templates/page-no-title.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "templates/page.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme.json",
+   "result": "passed"
+  }
+ ],
+ "php_version": "8.5.10",
+ "wp_version": "7.1.3",
+ "probe": {
+  "path": "docs/website/evidence/probe.json",
+  "version": "sitewright-wp-probe 2",
+  "fingerprint": "sha256:2b061a7c71f06444c6cab8a161c1321eb30d751dd1facc8951bc279f0631ab6a"
+ },
+ "timestamp": "2026-10-06T17:53:28Z",
+ "duration_ms": 7
+}

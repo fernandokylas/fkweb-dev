@@ -1,0 +1,316 @@
+{
+ "tool": "sw_site_check",
+ "tool_version": "2",
+ "target": "capture",
+ "result": "passed",
+ "findings": [
+  {
+   "check_id": "meta.basics",
+   "location": "404.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "no canonical link",
+   "action": "add one once the production URL is known"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "404.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "contact/index.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "index.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "menu/index.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "location": "order/index.html",
+   "severity": "warning",
+   "kind": "convention",
+   "evidence": "page contains fixture content",
+   "action": "fine for development; must be replaced before release"
+  }
+ ],
+ "diagnostics": [],
+ "checks": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "form.states",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "media.images",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "404.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "contact/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "menu/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "order/index.html",
+   "result": "passed"
+  },
+  {
+   "check_id": "site.404",
+   "target": ".",
+   "result": "passed"
+  }
+ ],
+ "timestamp": "2026-10-06T17:53:21Z",
+ "duration_ms": 12
+}

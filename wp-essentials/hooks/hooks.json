@@ -1,0 +1,17 @@
+{
+  "description": "wp-essentials: asks for confirmation before hard-to-reverse WP-CLI commands run through Bash (database, delete, update, eval, search-replace without --dry-run). Read-only; never blocks or writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/wp_guard.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

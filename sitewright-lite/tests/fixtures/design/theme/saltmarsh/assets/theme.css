@@ -1,0 +1,14 @@
+.wp-block-button__link {
+  border-radius: var(--wp--custom--radius);
+  padding: var(--wp--preset--spacing--1) var(--wp--preset--spacing--2);
+}
+
+.wp-block-button__link:focus-visible {
+  outline: 2px solid var(--wp--preset--color--ink);
+  outline-offset: 2px;
+}
+
+.is-style-teal-band {
+  background-color: var(--wp--preset--color--teal);
+  color: var(--wp--preset--color--on-teal);
+}

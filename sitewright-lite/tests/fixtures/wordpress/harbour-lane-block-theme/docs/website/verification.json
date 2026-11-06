@@ -1,0 +1,2149 @@
+{
+ "schema_version": 1,
+ "required_checks": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/404.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/contact/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/menu/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/order/index.html"
+  },
+  {
+   "check_id": "site.404",
+   "target": "capture"
+  },
+  {
+   "check_id": "wp.assets",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "wp.assets",
+   "target": "theme/harbour-lane/functions.php"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/contact.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/home.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/menu.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/order.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/parts/footer.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/parts/header.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/patterns/not-found.php"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/404.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/index.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/page-no-title.html"
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/page.html"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/contact.html"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/home.html"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/menu.html"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/order.html"
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/pages.json"
+  },
+  {
+   "check_id": "wp.patterns",
+   "target": "theme/harbour-lane/patterns/not-found.php"
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "theme/harbour-lane/functions.php"
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "theme/harbour-lane/patterns/not-found.php"
+  },
+  {
+   "check_id": "wp.runtime-content",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "wp.runtime-templates",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "wp.runtime-theme",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/parts/footer.html"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/parts/header.html"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/patterns/not-found.php"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/404.html"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/index.html"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/page-no-title.html"
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/page.html"
+  },
+  {
+   "check_id": "wp.theme-header",
+   "target": "theme/harbour-lane/style.css"
+  },
+  {
+   "check_id": "wp.theme-json",
+   "target": "theme/harbour-lane/theme.json"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/contact.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/home.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/menu.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/order.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/parts/footer.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/parts/header.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/patterns/not-found.php"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/404.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/index.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/page-no-title.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/page.html"
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/theme.json"
+  },
+  {
+   "check_id": "browser.wp-editor-valid",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.keyboard",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.reflow-320",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.form-states",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.reduced-motion",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.no-js",
+   "target": "theme/harbour-lane"
+  },
+  {
+   "check_id": "browser.console",
+   "target": "theme/harbour-lane"
+  }
+ ],
+ "waivers": [],
+ "records": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.labels",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "form.states",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "media.images",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b",
+    "capture/wp-content/themes/harbour-lane/assets/order.js": "sha256:c5f05f8ace843f9d61621eddc27c0428f15e816fdddf82457171dd716bd268ed"
+   }
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "nav.active",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:e11f8817150ff0c137c7dbcbc8a8c885c4f2dcac4cae455fbda1d1cb2daa2952",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/contact/index.html": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+    "capture/index.html": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+    "capture/menu/index.html": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+    "capture/order/index.html": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/index.html": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+    "capture/menu/index.html": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+    "capture/order/index.html": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/contact/index.html": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+    "capture/menu/index.html": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+    "capture/order/index.html": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/contact/index.html": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+    "capture/index.html": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+    "capture/order/index.html": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "capture/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:44cda9775b620aaf10a1a06a91f8d5a585d100d563dfb059e75b64d0a306e883",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "capture/contact/index.html": "sha256:144d04557466409063fd4a976aac16fc070a4e3a69cbac61e365fedc14a81ba6",
+    "capture/index.html": "sha256:4648906d679d6880895781fd32af57bdd54141903a45c02aded709687d3c2266",
+    "capture/menu/index.html": "sha256:f1774f8242435a780178fe7d1a0a776e6b391f7711ebed162060797ad813a508",
+    "capture/wp-content/themes/harbour-lane/assets/order.js": "sha256:c5f05f8ace843f9d61621eddc27c0428f15e816fdddf82457171dd716bd268ed",
+    "capture/wp-content/themes/harbour-lane/assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b"
+   }
+  },
+  {
+   "check_id": "site.404",
+   "target": "capture",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:99e52b0ac06690810407020f4e6fa4ed8f9dbea0fccccc4b256e37d38e1b4544",
+   "tool_and_version": "sw_site_check 2",
+   "timestamp": "2026-10-06T17:53:21Z",
+   "evidence_path": "docs/website/evidence/site-check-capture.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.assets",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.assets",
+   "target": "theme/harbour-lane/functions.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:5187f3822c0023c77169db70ed065dd6bc3ec1cb981e1e91579321e86c10fabb",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/contact.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0ed4941f68e898cfecf7df4e3c138820d04a1e8dedf69d7d27197d4e8da64c92",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/home.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:30701dd325d1c781ba1ded67ae32eff903aa3e663513531f576ebce654b54150",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/menu.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:cf68fcb49d9695f7c627fca04cebdc9819362f465fe30ead307c588a33273642",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "content/order.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0e5df10e03e929cbdfa936736a7d5501a2437b3b7fcf9772cccf07581a3e0c44",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/parts/footer.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:011f21791b6262abeb8874e435f69423b6c6a5b1c1c55ca9384066d50096801d",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/parts/header.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f03088af2e6004cee3829263f1fea11b1c7e16441ee164054384053724dd2dbf",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/patterns/not-found.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4adeafae14c1701284cd72d68a8fbc3eb9549faf45a5d1726fab5a5a2f5718d3",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:43b51c87cf6c0e6aef5f8db1e41fbaa9f7061f992802cb27417150f0dcb382a6",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/page-no-title.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:34e8c151b3b740fddd2f6f29b0c5327adb79915263d0534d349314f764ba8abc",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.block-markup",
+   "target": "theme/harbour-lane/templates/page.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:09b9e379592b6b26c6fd13ac96b7fa94f6a7774d9d8f085b35e3fed4ef23b901",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/contact.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0ed4941f68e898cfecf7df4e3c138820d04a1e8dedf69d7d27197d4e8da64c92",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/home.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:30701dd325d1c781ba1ded67ae32eff903aa3e663513531f576ebce654b54150",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/menu.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:cf68fcb49d9695f7c627fca04cebdc9819362f465fe30ead307c588a33273642",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/order.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0e5df10e03e929cbdfa936736a7d5501a2437b3b7fcf9772cccf07581a3e0c44",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.content-editable",
+   "target": "content/pages.json",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:6469b635062c05d6fe3a8ea9f49c2efd4499e890f965f30b04036c4bc5a2999c",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.patterns",
+   "target": "theme/harbour-lane/patterns/not-found.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "theme/harbour-lane/functions.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:5187f3822c0023c77169db70ed065dd6bc3ec1cb981e1e91579321e86c10fabb",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.php-safety",
+   "target": "theme/harbour-lane/patterns/not-found.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.runtime-content",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "read from a disposable local WordPress via the read-only probe, bound to the theme files and page content the probe observed; other plugins and production hosting not covered",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393"
+   }
+  },
+  {
+   "check_id": "wp.runtime-templates",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "read from a disposable local WordPress via the read-only probe, bound to the theme files and page content the probe observed; other plugins and production hosting not covered",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.runtime-theme",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "read from a disposable local WordPress via the read-only probe, bound to the theme files and page content the probe observed; other plugins and production hosting not covered",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/parts/footer.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:011f21791b6262abeb8874e435f69423b6c6a5b1c1c55ca9384066d50096801d",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/parts/header.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f03088af2e6004cee3829263f1fea11b1c7e16441ee164054384053724dd2dbf",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/patterns/not-found.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4adeafae14c1701284cd72d68a8fbc3eb9549faf45a5d1726fab5a5a2f5718d3",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:43b51c87cf6c0e6aef5f8db1e41fbaa9f7061f992802cb27417150f0dcb382a6",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/page-no-title.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:34e8c151b3b740fddd2f6f29b0c5327adb79915263d0534d349314f764ba8abc",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.template-structure",
+   "target": "theme/harbour-lane/templates/page.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:09b9e379592b6b26c6fd13ac96b7fa94f6a7774d9d8f085b35e3fed4ef23b901",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.theme-header",
+   "target": "theme/harbour-lane/style.css",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:7ff328ea44847e38dd4177ee78d73473d080ef8e0b1d326145bc6a11e3c54a9b",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.theme-json",
+   "target": "theme/harbour-lane/theme.json",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:414e32a328aa1e4fb1a932d4321a1896e6ef1556bb10e9904164ba6a3ed80a0f",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/contact.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0ed4941f68e898cfecf7df4e3c138820d04a1e8dedf69d7d27197d4e8da64c92",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/home.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:30701dd325d1c781ba1ded67ae32eff903aa3e663513531f576ebce654b54150",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/menu.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:cf68fcb49d9695f7c627fca04cebdc9819362f465fe30ead307c588a33273642",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "content/order.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:0e5df10e03e929cbdfa936736a7d5501a2437b3b7fcf9772cccf07581a3e0c44",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/parts/footer.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:011f21791b6262abeb8874e435f69423b6c6a5b1c1c55ca9384066d50096801d",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/parts/header.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:f03088af2e6004cee3829263f1fea11b1c7e16441ee164054384053724dd2dbf",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/patterns/not-found.php",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:4adeafae14c1701284cd72d68a8fbc3eb9549faf45a5d1726fab5a5a2f5718d3",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:43b51c87cf6c0e6aef5f8db1e41fbaa9f7061f992802cb27417150f0dcb382a6",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/page-no-title.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:34e8c151b3b740fddd2f6f29b0c5327adb79915263d0534d349314f764ba8abc",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/templates/page.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:09b9e379592b6b26c6fd13ac96b7fa94f6a7774d9d8f085b35e3fed4ef23b901",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "wp.tokens",
+   "target": "theme/harbour-lane/theme.json",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:414e32a328aa1e4fb1a932d4321a1896e6ef1556bb10e9904164ba6a3ed80a0f",
+   "tool_and_version": "sw_wp_theme_check 2",
+   "timestamp": "2026-10-06T17:53:28Z",
+   "evidence_path": "docs/website/evidence/wp-theme-check.json",
+   "observed_finding": "no defects found by the theme rules",
+   "limitations": "static read of theme and content files; PHP not executed, blocks not rendered or validated in the editor",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.wp-editor-valid",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Block validation in the WordPress 7.1.3 post editor (pages) and site editor parse (templates, parts, theme pattern); no Elementor or other builder present.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.keyboard",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.reflow-320",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.form-states",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.reduced-motion",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.no-js",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  },
+  {
+   "check_id": "browser.console",
+   "target": "theme/harbour-lane",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98; WordPress Playground CLI 3.1.57, WordPress 7.1.3, PHP 8.5.10",
+   "timestamp": "2026-10-06T17:53:36Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Local Playground (SQLite, PHP 8.5.10, WordPress 7.1.3) only; not a production host. Tested routes /, /menu/, /order/, /contact/ and the 404 template via ?page_id=99999.",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393",
+    "blueprint.json": "sha256:1bc7d8b49a0a1c66fd8090455a1cbf1cf50f9d03833a9f7606da9c624c470255"
+   }
+  }
+ ]
+}

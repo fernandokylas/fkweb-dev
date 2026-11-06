@@ -1,0 +1,32 @@
+{
+  "tool": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+  "captured_at": "2026-10-06T17:54:23.412Z",
+  "method": "Playwright MCP browser_run_code_unsafe against python3 -m http.server on 127.0.0.1:8765 serving site/; fresh browser contexts per mode (default, reducedMotion: reduce, 320x640 viewport, javaScriptEnabled: false); viewport 1280x800 unless noted",
+  "site": "harbour-lane-static/site served at /",
+  "observed_snapshot": "the records bind to the whole site/ directory, so any change to a page, stylesheet or script makes them stale",
+  "results": {
+    "pages": ["/", "/menu/", "/order/", "/contact/", "/404.html"],
+    "status": {"/": 200, "/menu/": 200, "/order/": 200, "/contact/": 200, "/404.html": 200},
+    "tab_order_menu": [
+      {"text": "Skip to content", "outline": "solid 2px", "current": null},
+      {"text": "Harbour Lane Bakery", "outline": "solid 2px", "current": null},
+      {"text": "Home", "outline": "solid 2px", "current": null},
+      {"text": "Menu", "outline": "solid 2px", "current": "page"},
+      {"text": "Order", "outline": "solid 2px", "current": null},
+      {"text": "Contact", "outline": "solid 2px", "current": null}
+    ],
+    "skip_link_then_tab_on_order": {"href": "#main", "next_focus": "555-0123", "inside_main": true},
+    "form_empty_submit": {"state": "error", "text": "There are problems with 4 fields:Enter your name.Enter an em", "invalid": ["name", "email", "cake", "date"], "focus": "name"},
+    "form_loading": {"state": "loading", "busy": "true", "disabled": true},
+    "review_flags": {"loading": "loading", "error": "error", "success": "success"},
+    "form_success": {"state": "success", "text": "Order enquiry recorded (simulated, nothing was sent).NameSam ExampleEm", "focus": "order-status", "invalid": 0},
+    "transition_durations_normal": {"0.15s": 11},
+    "transition_durations_reduced": {},
+    "animations_reduced": 0,
+    "overflow_320": {"/": 0, "/menu/": 0, "/order/": 0, "/contact/": 0, "/404.html": 0},
+    "nojs_menu_main_h2": 3,
+    "nojs_order_notice": "The order form needs JavaScript in this test build. Call 555-0123 to order."
+  },
+  "console_errors": [],
+  "failed_same_origin_requests": []
+}

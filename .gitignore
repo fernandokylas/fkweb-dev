@@ -1,0 +1,18 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Temporary fixture builds and test output
+.tmp/
+tests/output/
+dist/
+# Browser automation session output
+.playwright-mcp/
+# Marker written by the private release builder
+.fkweb-dev-release
+# Personal Claude Code settings
+.claude/settings.local.json
+# Project records created while trying the plugins inside this repo
+docs/website/

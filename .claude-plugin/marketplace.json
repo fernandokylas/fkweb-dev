@@ -1,0 +1,24 @@
+{
+  "name": "fkweb-dev",
+  "owner": {
+    "name": "Fernando Kylas"
+  },
+  "description": "Fernando Kylas's Claude Code plugins: WordPress essentials, the Sitewright Lite website workflow and Editorial Web Craft. Each installs on its own.",
+  "plugins": [
+    {
+      "name": "wp-essentials",
+      "source": "./wp-essentials",
+      "description": "Standalone WordPress setup, safe page updates, audit and pre-delivery gate."
+    },
+    {
+      "name": "sitewright-lite",
+      "source": "./sitewright-lite",
+      "description": "Free demo of Sitewright: plan, design, build and verify websites, on custom code or WordPress."
+    },
+    {
+      "name": "editorial-web-craft",
+      "source": "./editorial-web-craft",
+      "description": "Twenty composable skills plus a web-craft orchestrator for building editorial-grade web interfaces: ledger layouts, fluid type, optical polish, dual-ground colour, tactile motion, and audits that keep it all honest."
+    }
+  ]
+}

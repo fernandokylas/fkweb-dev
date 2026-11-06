@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order a cake | Harbour Lane Bakery</title>
+  <meta name="description" content="Send a cake order enquiry for collection from Harbour Lane Bakery.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body data-fixture="harbour-lane">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Harbour Lane Bakery</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu/">Menu</a></li>
+          <li><a href="/order/" aria-current="page">Order</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <h1>Order a cake</h1>
+      <p class="notice"><strong>This form is not connected yet.</strong> Orders are simulated in this test build and nothing is sent. Call <a href="tel:+15550123">555-0123</a> to place a real order.</p>
+      <form class="form" id="order-form" method="post" data-handler="simulated" aria-describedby="order-status">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+          <p class="error" id="name-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+          <p class="hint" id="email-hint">We reply within one working day.</p>
+          <p class="error" id="email-error"></p>
+        </div>
+        <div class="field">
+          <label for="cake">Cake</label>
+          <select id="cake" name="cake" required aria-describedby="cake-error">
+            <option value="">Choose a cake</option>
+            <option>Victoria sponge, serves 12</option>
+            <option>Chocolate and stout, serves 16</option>
+            <option>Lemon and elderflower, serves 20</option>
+          </select>
+          <p class="error" id="cake-error"></p>
+        </div>
+        <div class="field">
+          <label for="date">Collection date</label>
+          <input id="date" name="date" type="date" required aria-describedby="date-hint date-error">
+          <p class="hint" id="date-hint">At least three days from today.</p>
+          <p class="error" id="date-error"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message on the cake or notes <span class="hint">(optional)</span></label>
+          <textarea id="message" name="message" maxlength="400"></textarea>
+        </div>
+        <div class="actions">
+          <button class="button" type="submit">Send order enquiry</button>
+        </div>
+        <div class="status" id="order-status" role="status" aria-live="polite"></div>
+      </form>
+      <noscript><p class="notice">The order form needs JavaScript in this test build. Call 555-0123 to order.</p></noscript>
+      <section aria-labelledby="next">
+        <h2 id="next">What happens next</h2>
+        <ol>
+          <li>We check the date and reply by email within one working day.</li>
+          <li>You confirm, and pay when you collect.</li>
+        </ol>
+        <p><a href="/menu/#cakes">Compare celebration cakes</a></p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <section aria-labelledby="footer-visit">
+        <h2 id="footer-visit">Visit or call</h2>
+        <address>
+          14 Harbour Lane, Porthaven<br>
+          <a href="tel:+15550123">555-0123</a><br>
+          <a href="mailto:orders@harbourlane.test">orders@harbourlane.test</a>
+        </address>
+      </section>
+      <section aria-labelledby="footer-hours">
+        <h2 id="footer-hours">Opening hours</h2>
+        <p>Tuesday to Friday 7:30am to 5pm<br>Saturday 8am to 3pm<br>Sunday 8am to 1pm<br>Closed Mondays</p>
+      </section>
+      <p class="fixture-note">Harbour Lane Bakery is a fictional business used to test Sitewright lite [fixture]. Hours are sample hours (OPEN-1).</p>
+    </div>
+  </footer>
+  <script src="/assets/order.js" defer></script>
+</body>
+</html>

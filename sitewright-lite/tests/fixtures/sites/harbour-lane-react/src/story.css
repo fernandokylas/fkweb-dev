@@ -1,0 +1,61 @@
+/* Same tokens as the static bakery fixture (design record), trimmed to what this page uses. */
+:root {
+  --color-ground: #fbf8f2; --color-surface: #ffffff; --color-ink: #2b1d14; --color-muted: #5e4b3c;
+  --color-line: #e3d9cb; --color-accent: #8a3b12; --color-accent-ink: #ffffff; --color-focus: #0b57d0;
+  --space-2: 0.5rem; --space-3: 1rem; --space-4: 1.5rem; --space-5: 2.5rem; --space-6: 4rem;
+  --radius-1: 6px; --duration-short: 150ms;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-ground); color: var(--color-ink); font: 1rem/1.6 var(--font-body); }
+h1, h2 { font-family: var(--font-heading); line-height: 1.2; margin: 0 0 var(--space-3); }
+h1 { font-size: clamp(1.95rem, 1.5rem + 2vw, 2.44rem); }
+h2 { font-size: 1.56rem; }
+p { max-width: 65ch; margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.wrap { max-width: 72rem; margin: 0 auto; padding: 0 var(--space-3); }
+.skip-link { position: absolute; left: var(--space-3); top: -3rem; background: var(--color-surface); padding: var(--space-2) var(--space-3); }
+.skip-link:focus { top: var(--space-2); }
+.site-header, .site-footer { background: var(--color-surface); border-color: var(--color-line); border-style: solid; border-width: 0 0 1px; }
+.site-footer { border-width: 1px 0 0; padding-block: var(--space-4); color: var(--color-muted); }
+.site-header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding-block: var(--space-3); gap: var(--space-3); }
+.site-header ul { list-style: none; margin: 0; padding: 0; }
+.brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--color-ink); text-decoration: none; }
+main { padding-block: var(--space-5); }
+.lede { font-size: 1.125rem; }
+.button { font: inherit; font-weight: 600; padding: 0.625rem 1rem; border-radius: var(--radius-1); border: 2px solid var(--color-accent); cursor: pointer;
+  background: transparent; color: var(--color-accent); transition: background-color var(--duration-short) ease, color var(--duration-short) ease; }
+.button:hover { background: var(--color-accent); color: var(--color-accent-ink); }
+
+.story { display: grid; gap: var(--space-4); margin-block: var(--space-5); }
+.story__visual { position: sticky; top: 0; z-index: 1; padding-block: var(--space-3); background: var(--color-ground); }
+.story__figure { display: grid; justify-items: center; gap: var(--space-2); padding: var(--space-4); background: var(--color-surface);
+  border: 1px solid var(--color-line); border-radius: var(--radius-1); }
+.story__shape { display: block; width: 8rem; height: 5rem; background: #d9b98f; border-radius: 50% 50% 40% 40%;
+  transition: background-color 280ms ease, border-radius 280ms ease, height 280ms ease; }
+.story__figure[data-stage="feed"] .story__shape { width: 4rem; height: 6rem; border-radius: 12px 12px 6px 6px; background: #efe6d8; }
+.story__figure[data-stage="mix"] .story__shape { height: 4rem; border-radius: 0 0 50% 50%; background: #eadcc6; }
+.story__figure[data-stage="shape"] .story__shape { background: #e8d3b2; }
+.story__figure[data-stage="bake"] .story__shape { background: #a8652f; }
+.story__caption { font-weight: 600; }
+.story__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.story__steps li { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-1); padding: var(--space-4); }
+.story--live .story__steps li { min-height: 70vh; display: grid; align-content: center; opacity: 0.55; transition: opacity var(--duration-short) ease; }
+.story--live .story__steps li.is-active { opacity: 1; }
+.story__time { color: var(--color-muted); font-weight: 600; margin-bottom: var(--space-2); }
+.plain-steps { margin-block: var(--space-5); padding-left: var(--space-4); }
+.plain-steps li + li { margin-top: var(--space-3); }
+.after { margin-top: var(--space-5); }
+
+@media (min-width: 64rem) {
+  .story { grid-template-columns: 1fr 1fr; align-items: start; }
+  .story__visual { top: var(--space-6); padding: 0; }
+  .story__figure { min-height: 50vh; align-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .story__visual { position: static; }
+}

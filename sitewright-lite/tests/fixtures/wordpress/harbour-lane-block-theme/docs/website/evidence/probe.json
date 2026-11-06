@@ -1,0 +1,187 @@
+{
+    "probe": "sitewright-wp-probe 2",
+    "php_version": "8.5.10",
+    "wp_version": "7.1.3",
+    "theme": {
+        "stylesheet": "harbour-lane",
+        "template": "harbour-lane",
+        "name": "Harbour Lane",
+        "version": "0.1.0",
+        "is_block_theme": true,
+        "errors": [],
+        "files": {
+            "assets/order.js": "sha256:c5f05f8ace843f9d61621eddc27c0428f15e816fdddf82457171dd716bd268ed",
+            "assets/theme.css": "sha256:60eb22a4ff2f2cf11dee246ad8fdef092a65eac2fe5163dde3e257b103bbaf1b",
+            "functions.php": "sha256:5187f3822c0023c77169db70ed065dd6bc3ec1cb981e1e91579321e86c10fabb",
+            "parts/footer.html": "sha256:011f21791b6262abeb8874e435f69423b6c6a5b1c1c55ca9384066d50096801d",
+            "parts/header.html": "sha256:f03088af2e6004cee3829263f1fea11b1c7e16441ee164054384053724dd2dbf",
+            "patterns/not-found.php": "sha256:4672e3de03315bd745749663c1cac6df20eba028a5f00717ad904fa662a8e524",
+            "style.css": "sha256:7ff328ea44847e38dd4177ee78d73473d080ef8e0b1d326145bc6a11e3c54a9b",
+            "templates/404.html": "sha256:4adeafae14c1701284cd72d68a8fbc3eb9549faf45a5d1726fab5a5a2f5718d3",
+            "templates/index.html": "sha256:43b51c87cf6c0e6aef5f8db1e41fbaa9f7061f992802cb27417150f0dcb382a6",
+            "templates/page-no-title.html": "sha256:34e8c151b3b740fddd2f6f29b0c5327adb79915263d0534d349314f764ba8abc",
+            "templates/page.html": "sha256:09b9e379592b6b26c6fd13ac96b7fa94f6a7774d9d8f085b35e3fed4ef23b901",
+            "theme.json": "sha256:414e32a328aa1e4fb1a932d4321a1896e6ef1556bb10e9904164ba6a3ed80a0f"
+        },
+        "files_truncated": false
+    },
+    "settings": {
+        "show_on_front": "page",
+        "page_on_front": 4,
+        "permalink_structure": "/%postname%/"
+    },
+    "templates": [
+        {
+            "slug": "404",
+            "source": "theme",
+            "has_theme_file": true
+        },
+        {
+            "slug": "index",
+            "source": "theme",
+            "has_theme_file": true
+        },
+        {
+            "slug": "page-no-title",
+            "source": "theme",
+            "has_theme_file": true
+        },
+        {
+            "slug": "page",
+            "source": "theme",
+            "has_theme_file": true
+        }
+    ],
+    "parts": [
+        {
+            "slug": "footer",
+            "area": "footer",
+            "source": "theme"
+        },
+        {
+            "slug": "header",
+            "area": "header",
+            "source": "theme"
+        }
+    ],
+    "patterns": [
+        {
+            "slug": "harbour-lane/not-found",
+            "title": "Page not found"
+        }
+    ],
+    "pages": [
+        {
+            "slug": "home",
+            "path": "/",
+            "template": "page-no-title",
+            "menu_order": 0,
+            "has_blocks": true,
+            "content_sha256": "sha256:30701dd325d1c781ba1ded67ae32eff903aa3e663513531f576ebce654b54150",
+            "block_counts": {
+                "core/group": 5,
+                "core/heading": 6,
+                "core/paragraph": 8,
+                "core/buttons": 1,
+                "core/button": 2,
+                "core/table": 1
+            },
+            "freeform": [],
+            "unregistered": []
+        },
+        {
+            "slug": "menu",
+            "path": "/menu/",
+            "template": "",
+            "menu_order": 1,
+            "has_blocks": true,
+            "content_sha256": "sha256:cf68fcb49d9695f7c627fca04cebdc9819362f465fe30ead307c588a33273642",
+            "block_counts": {
+                "core/paragraph": 5,
+                "core/heading": 3,
+                "core/table": 2
+            },
+            "freeform": [],
+            "unregistered": []
+        },
+        {
+            "slug": "order",
+            "path": "/order/",
+            "template": "",
+            "menu_order": 2,
+            "has_blocks": true,
+            "content_sha256": "sha256:0e5df10e03e929cbdfa936736a7d5501a2437b3b7fcf9772cccf07581a3e0c44",
+            "block_counts": {
+                "core/paragraph": 2,
+                "core/html": 1,
+                "core/heading": 1,
+                "core/list": 1,
+                "core/list-item": 2
+            },
+            "freeform": [],
+            "unregistered": []
+        },
+        {
+            "slug": "contact",
+            "path": "/contact/",
+            "template": "",
+            "menu_order": 3,
+            "has_blocks": true,
+            "content_sha256": "sha256:0ed4941f68e898cfecf7df4e3c138820d04a1e8dedf69d7d27197d4e8da64c92",
+            "block_counts": {
+                "core/list": 1,
+                "core/list-item": 3,
+                "core/heading": 1,
+                "core/table": 1
+            },
+            "freeform": [],
+            "unregistered": []
+        }
+    ],
+    "mu_plugins": [],
+    "plugins": [],
+    "hooks": {
+        "template_redirect": [
+            "0 _wp_admin_bar_init",
+            "10 wp_old_slug_redirect",
+            "10 redirect_canonical",
+            "10 WP_Sitemaps::render_sitemaps",
+            "11 rest_output_link_header",
+            "11 wp_shortlink_header",
+            "1000 wp_redirect_admin_locations"
+        ],
+        "wp_head": [
+            "0 wp_enqueue_img_auto_sizes_contain_css_fix",
+            "1 _wp_render_title_tag",
+            "1 wp_enqueue_scripts",
+            "1 wp_preload_resources",
+            "1 wp_robots",
+            "1 wp_post_preview_js",
+            "1 wp_print_auto_sizes_contain_css_fix",
+            "1 wp_maybe_inline_styles",
+            "1 closure@wp-content/themes/harbour-lane/functions.php:61",
+            "2 wp_resource_hints",
+            "2 feed_links",
+            "3 feed_links_extra",
+            "4 wp_oembed_add_discovery_links",
+            "7 print_emoji_detection_script",
+            "8 wp_print_styles",
+            "9 wp_print_head_scripts",
+            "10 rest_output_link_wp_head",
+            "10 rsd_link",
+            "10 locale_stylesheet",
+            "10 wp_generator",
+            "10 rel_canonical",
+            "10 wp_shortlink_wp_head",
+            "10 _custom_logo_header_styles",
+            "10 wp_oembed_add_discovery_links",
+            "10 wp_oembed_add_host_js",
+            "10 WP_Script_Modules::print_import_map",
+            "10 WP_Script_Modules::print_head_enqueued_script_modules",
+            "10 WP_Script_Modules::print_script_module_preloads",
+            "50 wp_print_font_faces",
+            "99 wp_site_icon",
+            "101 wp_custom_css_cb"
+        ]
+    }
+}

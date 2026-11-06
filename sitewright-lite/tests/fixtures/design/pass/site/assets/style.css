@@ -1,0 +1,74 @@
+:root {
+  --color-ground: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-ink: #1f2a30;
+  --color-muted: #4d5b63;
+  --color-accent: #0f5c6e;
+  --color-accent-ink: #ffffff;
+  --color-focus: #b4400a;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --radius-1: 4px;
+  --duration-short: 120ms;
+  --font-body: system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ground: #11181c;
+    --color-surface: #1b252b;
+    --color-ink: #e8eef0;
+    --color-muted: #a9b7bd;
+    --color-accent: #7fc8d8;
+    --color-accent-ink: #0b1215;
+    --color-focus: #ffb37a;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font: 1rem/1.6 var(--font-body);
+}
+
+h1, h2 { line-height: 1.15; }
+
+p, li { max-width: 65ch; }
+
+.card {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border-radius: var(--radius-1);
+  padding: var(--space-3);
+}
+
+.card .meta { color: var(--color-muted); }
+
+.label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-1);
+  transition: background-color var(--duration-short);
+}
+
+.button:hover { text-decoration: underline; }
+
+a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}

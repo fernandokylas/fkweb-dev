@@ -1,0 +1,12 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Harbour Lane block theme fixture",
+		"author": "Sitewright lite test fixtures",
+		"description": "Activates the fixture theme and loads the fixture pages. Expects the theme mounted at /wordpress/wp-content/themes/harbour-lane and the content folder at /sitewright-content."
+	},
+	"steps": [
+		{ "step": "activateTheme", "themeFolderName": "harbour-lane" },
+		{ "step": "runPHP", "code": "<?php require_once '/wordpress/wp-load.php'; require '/sitewright-content/setup.php';" }
+	]
+}

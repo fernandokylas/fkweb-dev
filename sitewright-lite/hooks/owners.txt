@@ -1,0 +1,9 @@
+# Who owns a request in Sitewright Lite, one "request area: skill" per line. The session-start summary
+# prints these as one line so routing survives compaction; tests/hooks checks they match website-workflow §3.
+motion and animation: website-motion
+images, logos, brand assets: website-assets
+new direction, tokens, layout: website-design
+custom-code pages and styles: website-build-code
+WordPress theme and builder pages: website-build-wordpress
+checks, gate, handoff: website-verify
+live WordPress site: wp-site-setup, wp-page-update, wp-site-audit, wp-predelivery-check

@@ -1,0 +1,18 @@
+{
+ "schema_version": 1,
+ "project_identifier": "harbour-lane-bakery-fixture",
+ "requested_scope": "end-to-end-build",
+ "build_path": "custom-code",
+ "selected_framework_or_builder": "static-html",
+ "selected_design_family": "none",
+ "current_phase": "implement",
+ "completed_artifacts": [{"path": "website.md", "phase": "direction", "fingerprint": "sha256:0036578f98ad69014f4efaa5c9c948077c2820d7b253fc2892a703cbbe08e853"}],
+ "accepted_decisions": [{"id": "DEC-1", "decision": "static HTML for the fixture", "reason": "smallest custom-code route"}],
+ "assumptions": [{"id": "AS-1", "assumption": "fixture opening hours", "affects": "/, /contact"}],
+ "open_issues": [{"id": "OPEN-1", "issue": "real opening hours", "blocking": false},
+                 {"id": "OPEN-2", "issue": "order email recipient", "blocking": ["launch"]}],
+ "blocked_dependencies": [{"dependency": "order delivery endpoint", "needed_for": "live form", "action_needed": "user supplies recipient"}],
+ "verification_records": ["verification.json"],
+ "last_changed_targets": [],
+ "next_action": "Build the shared header and footer components."
+}

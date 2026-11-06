@@ -1,0 +1,7 @@
+{
+ "index.html": "/",
+ "menu/index.html": "/menu/",
+ "order/index.html": "/order/",
+ "contact/index.html": "/contact/",
+ "404.html": "/404.html"
+}

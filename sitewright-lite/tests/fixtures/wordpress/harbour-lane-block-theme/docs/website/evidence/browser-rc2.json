@@ -1,0 +1,209 @@
+{
+  "tool": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+  "captured_at": "2026-10-06T17:48:54.602Z",
+  "method": "Playwright MCP browser_run_code_unsafe against WordPress Playground CLI 3.1.57 on 127.0.0.1:9400, started with the fixture's theme and content mounted and a scratch copy of blueprint.json with \"login\": true (no credentials stored). The runtime reported WordPress 7.1.3, PHP 8.5.10 (sitewright-wp-probe 2; the CLI banner said 7.1.2 / 8.3). Viewport 1280x800 unless noted. Editor checks ran in a logged-in context; front-end checks in fresh logged-out contexts.",
+  "site": "harbour-lane block theme + content/ imported by blueprint.json",
+  "observed_snapshot": {
+    "note": "fingerprints (sw_records.fingerprint) of the inputs mounted into Playground for this run; the records bind to the same values through their target fingerprint and inputs",
+    "theme/harbour-lane": "sha256:36abe62a97492404f40de082989ad2d7829f5854b15b3005e6503255ce78b453",
+    "content": "sha256:4b70ddd504aa2830b3a10597c2ecc33bf7ced17a0b82bb4b7c06effa5ce9a393"
+  },
+  "editor": {
+    "logged_in": true,
+    "pages": [
+      {
+        "id": 7,
+        "slug": "contact",
+        "template": "",
+        "blocks": 6,
+        "invalid": [],
+        "fallback": [],
+        "dirty_after_load": false
+      },
+      {
+        "id": 6,
+        "slug": "order",
+        "template": "",
+        "blocks": 7,
+        "invalid": [],
+        "fallback": [],
+        "dirty_after_load": false
+      },
+      {
+        "id": 5,
+        "slug": "menu",
+        "template": "",
+        "blocks": 10,
+        "invalid": [],
+        "fallback": [],
+        "dirty_after_load": false
+      },
+      {
+        "id": 4,
+        "slug": "home",
+        "template": "page-no-title",
+        "blocks": 23,
+        "invalid": [],
+        "fallback": [],
+        "dirty_after_load": false
+      }
+    ],
+    "templates_and_parts": {
+      "records": [
+        {
+          "type": "wp_template_part",
+          "slug": "footer",
+          "source": "theme",
+          "blocks": 9,
+          "invalid": []
+        },
+        {
+          "type": "wp_template_part",
+          "slug": "header",
+          "source": "theme",
+          "blocks": 5,
+          "invalid": []
+        },
+        {
+          "type": "wp_template",
+          "slug": "404",
+          "source": "theme",
+          "blocks": 8,
+          "invalid": []
+        },
+        {
+          "type": "wp_template",
+          "slug": "index",
+          "source": "theme",
+          "blocks": 13,
+          "invalid": []
+        },
+        {
+          "type": "wp_template",
+          "slug": "page",
+          "source": "theme",
+          "blocks": 5,
+          "invalid": []
+        },
+        {
+          "type": "wp_template",
+          "slug": "page-no-title",
+          "source": "theme",
+          "blocks": 4,
+          "invalid": []
+        }
+      ],
+      "patterns": [
+        {
+          "name": "harbour-lane/not-found",
+          "blocks": 5,
+          "invalid": []
+        }
+      ]
+    },
+    "captured_at": "2026-10-06T17:48:54.602Z",
+    "method": "post editor: wp.data.select('core/block-editor').getBlocks() walked recursively after load (isValid false, core/freeform and core/missing collected); templates, parts and patterns: REST context=edit content parsed with wp.blocks.parse in the site editor"
+  },
+  "front_end": {
+    "logged_in": false,
+    "pages": [
+      "/",
+      "/menu/",
+      "/order/",
+      "/contact/",
+      "/?page_id=99999"
+    ],
+    "status": {
+      "/": 200,
+      "/menu/": 200,
+      "/order/": 200,
+      "/contact/": 200,
+      "/?page_id=99999": 404
+    },
+    "console_errors": [],
+    "failed_same_origin_requests": [],
+    "admin_bar": 0,
+    "tab_order_menu": [
+      {
+        "text": "Skip to content",
+        "outline": "solid 2px",
+        "current": null
+      },
+      {
+        "text": "Harbour Lane Bakery",
+        "outline": "solid 2px",
+        "current": null
+      },
+      {
+        "text": "Home",
+        "outline": "solid 2px",
+        "current": null
+      },
+      {
+        "text": "Menu",
+        "outline": "solid 2px",
+        "current": "page"
+      },
+      {
+        "text": "Order a cake",
+        "outline": "solid 2px",
+        "current": null
+      },
+      {
+        "text": "Contact",
+        "outline": "solid 2px",
+        "current": null
+      },
+      {
+        "text": "Order bread",
+        "outline": "solid 2px",
+        "current": null
+      }
+    ],
+    "skip_link_then_tab": {
+      "href": "#wp--skip-link--target",
+      "next_focus": "555-0123",
+      "inside_main": true
+    },
+    "form_empty_submit": {
+      "state": "error",
+      "text": "There are problems with 4 fields:Enter your name.Enter an em",
+      "invalid": [
+        "name",
+        "email",
+        "cake",
+        "date"
+      ],
+      "focus": "name"
+    },
+    "form_loading": {
+      "state": "loading",
+      "busy": "true",
+      "disabled": true
+    },
+    "form_success": {
+      "state": "success",
+      "text": "Order enquiry recorded (simulated, nothing was sent).NameSam ExampleEm",
+      "focus": "order-status",
+      "invalid": 0
+    },
+    "transition_normal": {
+      "0.15s, 0.15s": 4
+    },
+    "transition_reduced": {},
+    "animations_reduced": 0,
+    "overflow_320": {
+      "/": 0,
+      "/menu/": 0,
+      "/order/": 0,
+      "/contact/": 0,
+      "/?page_id=99999": 0
+    },
+    "nojs_menu_main_h2": 3,
+    "nojs_order_notice": "The order form needs JavaScript in this test build. Call 555-0123 to order.",
+    "captured_at": "2026-10-06T17:48:17.196Z",
+    "not_found_note": "Pretty-permalink misses redirect 301 to / under Playground CLI 3.1.57 (PHP_SELF artifact, see D-14); the 404 template was reached through ?page_id=99999",
+    "console_note": "The expected 'Failed to load resource: 404' for the not-found document itself is excluded",
+    "admin_bar_note": "#wpadminbar absent: the logged-out context set playground_auto_login_already_happened=1 so the login blueprint's auto-login did not run"
+  }
+}

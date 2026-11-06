@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "custom": false,
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "paper", "name": "Paper", "color": "#faf7f0" },
+        { "slug": "ink", "name": "Ink", "color": "#1d1d1b" },
+        { "slug": "teal", "name": "Teal", "color": "#0f5c6e" },
+        { "slug": "on-teal", "name": "On teal", "color": "#ffffff" }
+      ]
+    },
+    "spacing": {
+      "spacingSizes": [
+        { "slug": "1", "name": "Small", "size": "0.5rem" },
+        { "slug": "2", "name": "Medium", "size": "1rem" },
+        { "slug": "3", "name": "Large", "size": "2rem" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "slug": "body", "name": "System", "fontFamily": "system-ui, sans-serif" }
+      ],
+      "fontSizes": [
+        { "slug": "body", "name": "Body", "size": "1.0625rem" }
+      ]
+    },
+    "custom": { "radius": "3px" },
+    "layout": { "contentSize": "40rem" }
+  },
+  "styles": {
+    "color": { "background": "var:preset|color|paper", "text": "var:preset|color|ink" },
+    "typography": { "fontSize": "var:preset|font-size|body", "lineHeight": "1.6" },
+    "elements": {
+      "button": {
+        "color": { "background": "var:preset|color|teal", "text": "var:preset|color|on-teal" }
+      }
+    }
+  }
+}

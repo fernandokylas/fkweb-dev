@@ -1,0 +1,13 @@
+{
+	"front_page": "home",
+	"pages": [
+		{ "slug": "home", "title": "Home", "file": "home.html", "menu_order": 0, "template": "page-no-title",
+		  "excerpt": "Bread and celebration cakes baked on Harbour Lane every morning. Order a cake ahead or drop in for this week's loaves." },
+		{ "slug": "menu", "title": "Menu", "file": "menu.html", "menu_order": 1, "template": "",
+		  "excerpt": "This week's bread, pastries and celebration cakes at Harbour Lane Bakery, with prices." },
+		{ "slug": "order", "title": "Order a cake", "file": "order.html", "menu_order": 2, "template": "",
+		  "excerpt": "Ask for a celebration cake at least three days ahead. This test build simulates the order form." },
+		{ "slug": "contact", "title": "Contact", "file": "contact.html", "menu_order": 3, "template": "",
+		  "excerpt": "Address, phone, email and opening hours for Harbour Lane Bakery." }
+	]
+}

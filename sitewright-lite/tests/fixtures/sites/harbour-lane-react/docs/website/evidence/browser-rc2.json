@@ -1,0 +1,30 @@
+{
+  "tool": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+  "captured_at": "2026-10-06T17:56:22.235Z",
+  "method": "Playwright MCP browser_run_code_unsafe against python3 -m http.server on 127.0.0.1:8766 serving dist/ of `npm run build` in a clean scratch copy of this fixture's tracked files; fresh browser contexts per mode (default, reducedMotion: reduce, 320x640, javaScriptEnabled: false); viewport 1280x800 unless noted",
+  "site": "harbour-lane-react production build (vite build) served at /",
+  "observed_snapshot": "the records bind src plus the build inputs index.html, public, package.json, package-lock.json, vite.config.ts and tsconfig.json, so a change to any of them makes the evidence stale",
+  "build_output": ["dist/index.html", "dist/assets/index-BPlrhG2_.css", "dist/assets/index-TxHmr2aL.js", "dist/404.html", "dist/favicon.svg"],
+  "results": {
+    "status": {"/": 200, "/404.html": 200},
+    "live": {"cls": "story story--live", "observers": "1", "sticky": "sticky"},
+    "steps": [
+      {"active": "0", "stage": "feed"},
+      {"active": "1", "stage": "mix"},
+      {"active": "2", "stage": "shape"},
+      {"active": "3", "stage": "bake"}
+    ],
+    "after_unmount": {"observers": "0", "list_items": 4},
+    "after_six_mounts": "1",
+    "reduced": {"cls": "story story--static", "observers": null, "observers_note": "no data-story-observers attribute: no observer was ever created", "sticky": "static", "step_opacity": ["1", "1", "1", "1"], "animations": 0},
+    "overflow_320_live": 0,
+    "overflow_320_reduced": 0,
+    "overflow_320_404": 0,
+    "tab_order": ["Skip to content | solid 2px", "Harbour Lane Bakery | solid 2px", "Our sourdough | solid 2px", "Read as a list | solid 2px"],
+    "skip_link_then_tab": {"next_focus": "Read as a list", "inside_main": true},
+    "nojs_text": "How our sourdough is made\n\nThis page needs JavaScript in this test build. The same steps are listed on the bakery's menu"
+  },
+  "console_errors": [],
+  "failed_same_origin_requests": [],
+  "notes": "React StrictMode is development-only; the lifecycle count is from the production build plus six mount/unmount cycles via the list toggle"
+}

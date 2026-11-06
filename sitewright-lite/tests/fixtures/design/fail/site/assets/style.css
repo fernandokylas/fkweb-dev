@@ -1,0 +1,40 @@
+:root {
+  --color-ground: #ffffff;
+  --color-ink: #333333;
+  --color-faint: #9a9a9a;
+  --color-accent: #e07a3f;
+  --space-1: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ground: #121212;
+    --color-ink: #5a5a5a;
+  }
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+.notice {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+p {
+  line-height: 1.1;
+  letter-spacing: 0.15em;
+}
+
+.prose p { text-align: justify; }
+
+.btn {
+  background: var(--color-accent);
+  color: var(--color-ground);
+  padding: 2px 4px;
+}
+
+.caption { color: var(--color-faint); }

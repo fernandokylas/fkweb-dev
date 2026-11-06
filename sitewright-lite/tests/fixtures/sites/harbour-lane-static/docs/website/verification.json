@@ -1,0 +1,1097 @@
+{
+ "schema_version": 1,
+ "required_checks": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/404.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/contact/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/menu/index.html"
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/order/index.html"
+  },
+  {
+   "check_id": "site.404",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.keyboard",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.reflow-320",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.form-states",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.reduced-motion",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.no-js",
+   "target": "site"
+  },
+  {
+   "check_id": "browser.console",
+   "target": "site"
+  }
+ ],
+ "waivers": [],
+ "records": [
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "a11y.landmarks",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.fixture-markers",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "content.placeholders",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.labels",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "form.states",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "media.images",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "meta.basics",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "motion.reduced",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.active",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/404.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:dcc2347b44770e443e545b282db889ed27e27323b9de4986b2ebbbcd6a5a1689",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/contact/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:2ee88fd703f3874b845460f7977f622505384ee6148f6145e90a6046840a72a3",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:11e640eb3e1bd873af38b044d5731039957b08d11ebd88daf13ab26216da078f",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/menu/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:9fa44782a41389fdc4d39f8042687556ad6c2be23cee3c2f6317568cda60261c",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "nav.internal-links",
+   "target": "site/order/index.html",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:466fe7aef865e9aec4f2b172a33c5aff4f54d7adfb797bb572baefdd85354c91",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "site.404",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "automated",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "sw_site_check 1",
+   "timestamp": "2026-10-06T11:43:40Z",
+   "evidence_path": "docs/website/evidence/static-check.json",
+   "observed_finding": "no defects found by the static rules",
+   "limitations": "static source check; does not render the page or test keyboard, contrast or layout",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": ""
+  },
+  {
+   "check_id": "browser.keyboard",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Chromium only; header tab order sampled on /menu/ and the skip link on /order/; no screen-reader test",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.reflow-320",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Chromium only; 320px width checked on every page, intermediate widths not swept",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.form-states",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "simulated handler only; nothing is sent; no real endpoint tested",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.reduced-motion",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "emulated media in Chromium; interactive elements on /menu/ sampled",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.no-js",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "Chromium only",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  },
+  {
+   "check_id": "browser.console",
+   "target": "site",
+   "result": "passed",
+   "required_or_optional": "required",
+   "method": "browser",
+   "source_revision_or_target_fingerprint": "sha256:b236dca47084ecc1a8b8deb557a6bf760fa70b35b44ff941ecd9236908928429",
+   "tool_and_version": "Playwright MCP 0.0.83 (playwright-core 1.64.0-alpha-1790635538000), chromium 154.0.8037.98",
+   "timestamp": "2026-10-06T17:55:35Z",
+   "evidence_path": "docs/website/evidence/browser-rc2.json",
+   "observed_finding": "",
+   "limitations": "only pages and states visited in the run",
+   "issue_id_when_applicable": "",
+   "skip_reason_when_applicable": "",
+   "inputs": {}
+  }
+ ]
+}

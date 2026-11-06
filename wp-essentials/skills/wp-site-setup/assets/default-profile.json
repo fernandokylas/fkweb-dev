@@ -1,0 +1,41 @@
+{
+  "profile": "wp-essentials default (British English)",
+  "locale": "en_GB",
+  "site": {
+    "blogname": null,
+    "blogdescription": null,
+    "admin_email": null,
+    "timezone_string": null
+  },
+  "options": {
+    "date_format": "j F Y",
+    "time_format": "H:i",
+    "start_of_week": "1",
+    "thumbnail_size_w": "0",
+    "thumbnail_size_h": "0",
+    "medium_size_w": "0",
+    "medium_size_h": "0",
+    "medium_large_size_w": "0",
+    "medium_large_size_h": "0",
+    "large_size_w": "0",
+    "large_size_h": "0",
+    "uploads_use_yearmonth_folders": "0",
+    "default_comment_status": "closed",
+    "default_ping_status": "closed",
+    "default_pingback_flag": "0",
+    "comment_registration": "1",
+    "users_can_register": "0",
+    "default_role": "subscriber",
+    "permalink_structure": "/%postname%/"
+  },
+  "stages": {
+    "setup": {"blog_public": "0"},
+    "launch": {"blog_public": "1"}
+  },
+  "cleanup": {
+    "delete_default_content": true,
+    "close_comments_on_existing": true,
+    "remove_plugins": ["hello"],
+    "remove_inactive_default_themes": false
+  }
+}

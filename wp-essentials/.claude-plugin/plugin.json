@@ -1,0 +1,8 @@
+{
+  "name": "wp-essentials",
+  "version": "0.1.1",
+  "description": "Standalone WordPress essentials: baseline site setup (British English defaults, media sizes off, comments and registration off), safe page updates, read-only site audit and a pre-delivery gate. No third-party skills needed.",
+  "author": {"name": "Fernando Kylas"},
+  "license": "MIT",
+  "keywords": ["wordpress", "wp-cli", "site-setup", "audit", "pre-launch", "seo", "security"]
+}

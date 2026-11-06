@@ -1,0 +1,34 @@
+{
+  "copies": [
+    {
+      "from": "wp-essentials/skills/wp-site-setup",
+      "to": [
+        "sitewright-lite/skills/wp-site-setup"
+      ]
+    },
+    {
+      "from": "wp-essentials/skills/wp-page-update",
+      "to": [
+        "sitewright-lite/skills/wp-page-update"
+      ]
+    },
+    {
+      "from": "wp-essentials/skills/wp-site-audit",
+      "to": [
+        "sitewright-lite/skills/wp-site-audit"
+      ]
+    },
+    {
+      "from": "wp-essentials/skills/wp-predelivery-check",
+      "to": [
+        "sitewright-lite/skills/wp-predelivery-check"
+      ]
+    },
+    {
+      "from": "wp-essentials/hooks/wp_guard.py",
+      "to": [
+        "sitewright-lite/hooks/wp_guard.py"
+      ]
+    }
+  ]
+}
