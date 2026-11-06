@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.4 — 2026-11-06
+
+### Fixed
+
+- `tests/visual/test_visual_measure.py` could not load on Python 3.9 because of a syntax error, so its 14 tests never ran there. They now load and pass on Python 3.9. No change to the plugin's behaviour.
+
 ## 0.3.3 — 2026-11-06
 
 ### Changed

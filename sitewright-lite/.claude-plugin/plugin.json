@@ -1,6 +1,6 @@
 {
   "name": "sitewright-lite",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Plan, design and build websites in Claude Code: a shared planning/design core with custom-code and WordPress build paths, plus WordPress setup, safe page updates, site audit and a pre-delivery gate. No third-party skills needed.",
   "author": {
     "name": "Fernando Kylas"

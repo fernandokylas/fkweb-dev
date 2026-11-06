@@ -193,10 +193,11 @@ class VisualMeasureTest(unittest.TestCase):
         cls.results = {}
         for name, body in PAGES.items():
             page = cls.dir / f"{name}.html"
+            sweep = ' data-sweep="true"' if name in SWEEP else ""
             page.write_text(f"<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>{name}</title>"
                             f"<style>{BASE} {CSS[name]}</style></head><body>{body}\n"
                             f"<script src=\"visual-measure.js\" data-output=\"dom\" data-scale=\"{SCALE}\" "
-                            f"data-root=\"main\"{' data-sweep=\"true\"' if name in SWEEP else ''}></script>"
+                            f"data-root=\"main\"{sweep}></script>"
                             f"</body></html>")
             cls.results[name] = cls.measure(page, SIZE.get(name, "1280,900"), FLAGS.get(name, []))
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 — 2026-11-06
+
+- Fix: `inline-svg-decorator`'s `scripts/wave.py` crashed on Python 3.9 with a `TypeError` before producing any output. It now runs on Python 3.9 and later.
+
 ## 1.0.2 — 2026-10-31
 
 - Now installed from the `fkweb-dev` marketplace: `claude plugin marketplace add fernandokylas/fkweb-dev`, then `claude plugin install editorial-web-craft@fkweb-dev`. The plugin no longer carries its own marketplace manifest; the marketplace replaces the `fernandokylas/editorial-web-craft` repository.

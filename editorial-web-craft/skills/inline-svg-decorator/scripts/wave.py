@@ -13,6 +13,8 @@ Usage:
 Styles: wave (cubic béziers), tilt (diagonal), steps (square wave).
 Output is a complete <svg> element ready to paste; the fill is currentColor.
 """
+from __future__ import annotations
+
 import argparse
 import random
 
