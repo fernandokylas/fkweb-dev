@@ -64,9 +64,10 @@ Also: `clearProps: "transform"` in `onComplete` so leftover inline transforms do
 
 Two `<script>` tags before your own, from the CDN:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
 ```
+Pin the exact version (3.15.1 here) in every example and in the lock file; an unpinned `gsap@3` changes under you. Do not put `data-reveal` on the page heading or hero if you can avoid it, and keep the release timeout in `assets/entrance.js` (`releaseMs`, 2.5s by default) so a first-screen `data-reveal` never stays hidden when the script fails.
 In a bundled project, `import { gsap } from "gsap"; import { ScrollTrigger } from "gsap/ScrollTrigger"; gsap.registerPlugin(ScrollTrigger);`. In a single-file artifact (`encapsulated-mockup-builder`) the containment check reports these two tags as WARNs, not failures — acknowledge them with `--allow-cdn`. The page must still show all content if GSAP fails to load, which the `scripting: enabled` guard plus the `window.gsap` check in `entrance.js` gives you.
 
 ## Performance guardrails

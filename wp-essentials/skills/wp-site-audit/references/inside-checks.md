@@ -19,6 +19,9 @@ Run only when the user has given WP-CLI access. Every command here is read-only.
 | Content | `<wp> post list --post_type=page --post_status=publish --fields=ID,post_title,post_name --format=csv` | Page inventory to compare against the sitemap |
 | | `<wp> post list --post_status=draft,pending,private --format=count` | Unfinished work the owner may have forgotten |
 | Builder | `<wp> post meta list <ID> --keys=_elementor_edit_mode` | Which pages Elementor manages |
+| | `<wp> elementor system-info` (only if Elementor is active) | Elementor version and server environment; read-only |
+| | `<wp> elementor experiments-status` (only if Elementor is active) | Which experiments are on (the Atomic Editor setting decides whether new pages use V4). If the hyphenated name is not recognised, run `<wp> help elementor` for the exact form. Do not activate or deactivate anything. |
+| | `<wp> plugin is-installed mosaic` and `<wp> plugin list --name=mosaic --fields=name,status,version --format=csv` | Mosaic Builder is present if the folder `wp-content/plugins/mosaic/` exists. Report that Mosaic is installed and whether it is active; it is edited in its own visual editor, and this audit cannot check what is stored in its design data. |
 | Cron | `<wp> cron event list --fields=hook,next_run_relative --format=csv` | Overdue events mean WP-Cron is not firing; a host cron may be needed |
 | Size | `<wp> db size --tables --format=csv`, `<wp> post list --post_type=attachment --format=count` | Very large tables (logs, sessions) are a finding. Recommend a reviewed clean-up; do not clean up yourself. |
 

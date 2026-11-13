@@ -7,7 +7,7 @@ What to keep, what to strip. The principle: remove *displacement* (things travel
 | Entrance slide/scale (`y: 30`, `scale(0.95)` → rest) | Low–medium | Opacity-only fade, ≤200ms, zero displacement |
 | Hover lift (`translateY(-4px) scale(1.02)`) | Low | No transform; keep the shadow/colour/border change |
 | Press compression (`scale(0.97)`) | Low | No transform; keep background/shadow change or none |
-| Staggered cascade | Low–medium | Fade all at once (drop the stagger), or set visible instantly |
+| Staggered cascade | Low–medium | Fade all at once (drop the stagger), or show the end state with no transition |
 | Parallax (`background-attachment: fixed`, scroll-speed layers) | **High** | `background-attachment: scroll`; all layers move together (i.e. not at all relative to content) |
 | Scroll-driven / scrubbed animation | **High** | Show final state; no scrub |
 | Smooth scroll (`scroll-behavior: smooth`, `scrollIntoView({behavior:'smooth'})`) | Medium–high | `auto` / instant jump |
@@ -26,9 +26,15 @@ What to keep, what to strip. The principle: remove *displacement* (things travel
 
 ## Duration guidance under reduce
 
-- Opacity fades: 100–200ms are fine and help orientation. 0.01ms "instant" is acceptable but loses the hint.
+- Opacity fades: 100–200ms are fine and help orientation. Do not collapse them to a near-zero duration (for example `0.01ms`): that also removes the fades that are allowed to stay, and it is not the recommended safety net.
 - Anything with displacement: 0. Not "smaller", zero.
 - Colour / shadow / border changes: unchanged — they aren't motion.
+
+## How to get there
+
+1. **Default: author the motion inside `@media (prefers-reduced-motion: no-preference)`.** Then the reduced case is simply no motion and nothing has to be undone.
+2. **Safety net: the whitelist form** (`SKILL.md`, section 1): under `reduce`, only `opacity`, colour, border, fill and stroke may transition, at about 150ms, and keyframe animation is switched off. Use this for anything a component forgot, not as a replacement for step 1.
+3. **End states:** because the net switches animations off, every element that is hidden before an animation (`opacity: 0`, a `from` keyframe, a skeleton delay, a `data-reveal` start) needs an explicit end state under `reduce` (`opacity: 1; transform: none`), or it stays invisible.
 
 ## Not vestibular triggers (don't strip these)
 

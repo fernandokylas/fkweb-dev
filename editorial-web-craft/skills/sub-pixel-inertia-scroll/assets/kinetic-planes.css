@@ -1,6 +1,6 @@
 /* Kinetic planes — parallax and scroll-cued arrivals on the native scroll track.
    Partial: host declares `@layer base, layout, components, utilities;` first.
-   Planes use CSS scroll-driven animations (Chrome 115+, Safari 26+, Firefox behind flag);
+   Planes use CSS scroll-driven animations (Chrome 115+, Safari 26+, Firefox 159+ since 2026-10-27, Baseline newly available);
    elsewhere they simply sit still — an acceptable degrade. */
 
 :root {

@@ -40,6 +40,36 @@ class AskTests(unittest.TestCase):
         "wp search-replace a b --dry-run-later",
         "wp option update siteurl https://example.test",
         "wp package install foo/bar",
+        # Elementor commands that overwrite data
+        "wp elementor replace-urls http://old.test https://new.test",
+        "wp elementor kit-import kit.zip",
+        "wp elementor library-import templates.json",
+        "wp elementor kit import kit.zip",
+        "wp --path=/x elementor replace-urls a b --force",
+        # Novamira: code execution and sign-in
+        "novamira run execute-php --input '{\"code\":\"echo 1;\"}'",
+        "novamira --site staging run run-wp-cli --input '{\"command\":\"plugin list\"}'",
+        "novamira --site staging run execute-php",
+        "novamira auth login https://example.test --name staging",
+        "cd /srv && novamira auth logout",
+        "/usr/local/bin/novamira run execute-php",
+        "novamira run 'execute-php' --input x",
+        'novamira --site staging run "run-wp-cli"',
+        "novamira -s staging run execute-php",
+        "npx @novamira/cli run execute-php",
+        "npx -y @novamira/cli@1.2.0 --site staging run execute-php",
+        "pnpm dlx @novamira/cli auth login https://example.test",
+        "novamira --verbose run execute-php",
+        "novamira --site staging run some-new-ability",
+        "true && novamira run execute-php",
+        'bash -c "novamira run execute-php"',
+        "sh -c 'cd /srv && novamira --site staging run run-wp-cli'",
+        'eval "npx @novamira/cli auth login https://example.test"',
+        "ssh web1 'novamira auth login https://example.test'",
+        "novamira run -s agent-context execute-php",
+        "novamira run agent-context execute-php",
+        "echo " + "x" * 20_001,
+        "novamira --site staging run execute-ability --input '{\"ability\":\"core/execute-php\"}'",
     ]
 
     def test_asks(self):
@@ -56,6 +86,10 @@ class AskTests(unittest.TestCase):
         code, out = run_guard(bash("cd /srv && wp plugin delete hello"))
         self.assertEqual(json.loads(out)["hookSpecificOutput"]["permissionDecision"], "ask")
 
+    def test_novamira_reason_names_the_risk(self):
+        _, out = run_guard(bash("novamira --site staging run execute-php"))
+        self.assertIn("PHP", json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"])
+
     def test_reason_names_the_risk(self):
         _, out = run_guard(bash("wp db reset --yes"))
         self.assertIn("database", json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"])
@@ -69,7 +103,11 @@ class SilentTests(unittest.TestCase):
     def test_safe_commands(self):
         for cmd in ["wp option get blogname", "wp plugin list", "wp search-replace a b --dry-run",
                     "wp search-replace a b \\\n  --dry-run", "wp --path /x plugin list", 'ssh live "wp option get home"',
-                    "wp option update blogname Bakery", "echo evaluate", 'git commit -m "fix"']:
+                    "wp option update blogname Bakery", "echo evaluate", 'git commit -m "fix"',
+                    "wp elementor flush-css", "wp elementor system-info", "wp elementor experiments-status",
+                    "novamira --version", "novamira sites list --json", "novamira --site staging doctor --json",
+                    "novamira --site staging discover", "novamira --site staging run agent-context",
+                    "npm install -g @novamira/cli", "echo novamira run"]:
             with self.subTest(cmd=cmd):
                 self.assert_silent(bash(cmd))
 

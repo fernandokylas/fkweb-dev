@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.5 — 2026-11-13
+
+### Fixed
+
+- Synced from `wp-essentials` 0.1.2: `wp_guard` also asks before Novamira commands that run code or sign in (`run execute-php`, `run run-wp-cli`, `auth`) and before `wp elementor replace-urls`, `kit-import` and `library-import`. `wp-page-update` and `wp-site-audit` gain the Elementor V4 caution, `flush-css`, `--skip-columns=guid`, multisite scope and batching notes, read-only Elementor checks and Mosaic Builder detection.
+
 ## 0.3.4 — 2026-11-06
 
 ### Fixed

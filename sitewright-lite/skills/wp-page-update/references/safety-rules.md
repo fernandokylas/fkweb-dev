@@ -40,9 +40,12 @@ What stays safe: reading, exporting, and making a single-page edit through the e
 - **Read (allowed as evidence):** `list`, `get`, `status`, `version`, `check-update`, `size`, `count`, `is-installed`, `is-active`, `verify-checksums`, `export` to a local file, `search-replace --dry-run`.
 - **Write (class B-D, needs approval):** `post update`, `option update`, `menu …`, `plugin activate`.
 - **Hard to reverse (class D):** `install`, `update`, `deactivate`, `delete`, `uninstall`, `search-replace` without `--dry-run`, `db import/reset/drop/query`, `user delete`, `site empty`.
-- **Never:** `eval`, `eval-file`, `shell`, `db query` with writes. If the job truly needs PHP, write a reviewed mu-plugin or snippet and show it to the user.
+- **Never:** `eval`, `eval-file`, `shell`, `db query` with writes. If the job truly needs PHP, write a reviewed mu-plugin or snippet and show it to the user. The same applies to the Novamira CLI abilities `run execute-php` and `run run-wp-cli`, which run PHP or WP-CLI on the site without passing through the `wp` guard.
+- **Search-replace:** always `--dry-run` first, add `--skip-columns=guid` (post GUIDs must not change), and keep serialised data intact (WP-CLI handles it; raw SQL does not).
+- **Multisite scope:** say which site a command touches. Use `--url=<site>` for one site and `--network` only when every site is meant; a command run without either acts on the main site. Confirm the scope with the user before a class D change.
+- **Batching:** change large sets in small batches (for example `--per-page`/ID ranges), check the first batch, and stop at the first error. Do not loop a write command over every post in one run.
 
-The plugin's WP-CLI guard hook (a PreToolUse hook on Bash) asks for confirmation when a Bash command uses the hard-to-reverse verbs. It is a seatbelt, not permission.
+The plugin's WP-CLI guard hook (a PreToolUse hook on Bash) asks for confirmation when a Bash command uses the hard-to-reverse verbs, `wp elementor replace-urls`, `kit-import` and `library-import`, `novamira run execute-php`, `novamira run run-wp-cli` and `novamira auth`. It is a seatbelt, not permission.
 
 ## 5. Lack of access is not lack of evidence
 
@@ -56,7 +59,8 @@ If WP-CLI is unavailable (some hosts disable `proc_open` or `exec`), a REST rout
 
 ## 7. Page builders
 
-- **Elementor:** the page lives in the `_elementor_data` post meta (JSON), not `post_content`. Edit in the Elementor editor, or make a targeted change to that JSON: change only the target widget's setting, keep every other key and id, and save through Elementor's own API or editor. Never overwrite the whole meta. Afterwards, regenerate Elementor CSS (Elementor > Tools > Regenerate CSS) and view the page.
+- **Elementor:** the page lives in the `_elementor_data` post meta (JSON), not `post_content`. Edit in the Elementor editor. Do not write the meta directly: if a programmatic change is unavoidable, change only the target widget's setting, keep every other key and id, and save through Elementor's own API or editor. Never overwrite the whole meta. Afterwards, regenerate Elementor CSS with `wp elementor flush-css` (add `--network` on a multisite network, or `--url=<site>` for one site) or Elementor > Tools > Regenerate CSS, and view the page.
+- **Elementor V4 (atomic) caution:** a page can mix v3 widgets and atomic elements. Atomic classes and variables cannot be applied to v3 widgets. Before any programmatic edit, inspect the page's real data to see which kind each element is: the atomic data format, and where atomic classes and variables are stored, are not confirmed in Elementor's public documentation. Edit through the editor, then flush the CSS and check the page. Do not assume a site runs V4; a site on V3 follows the older rules.
 - **Block editor (Gutenberg):** content is HTML with `<!-- wp:… -->` comments. Keep the comment delimiters and their JSON attributes intact, or the block shows as invalid.
 - **Other builders (Divi, WPBakery, Bricks, Oxygen):** use the builder's own editor. Their storage formats are easy to corrupt.
 

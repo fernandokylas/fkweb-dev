@@ -30,7 +30,7 @@ H3 goes to the *body* face on purpose: serif sub-headings at 1.25rem look smalle
 
 ```css
 :root {
-  /* Display — editorial tone */
+  /* Display — an example face; choose from the subject and record why */
   --font-display: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-weight-display: 700;
   --letter-spacing-display: -0.03em;
@@ -84,7 +84,7 @@ Small, uppercase, tracked-out sans (`.ui-metadata`) is the third register: dates
 
 ## Choosing the pair
 
-Playfair + system sans is the default and needs no justification. When the brief has a tone — financial, literary, luxury, studio, tech — pick from `references/pairings.md`, which lists tested pairs with the weights to load, the Google Fonts link pattern, and the system-only stacks for offline artifacts. Load two or three weights, not the whole family; a variable font with an axis range is ideal.
+No pairing is the default that needs no justification. Derive the display voice from the subject and the brief (financial, literary, luxury, studio, tech, or none of these), then record in one sentence why that face suits it. `references/pairings.md` lists example pairs, each with its reason, with the weights to load, the Google Fonts link pattern, and the system-only stacks for offline artifacts. Load two or three weights, not the whole family; a variable font with an axis range is ideal.
 
 If fonts can't load (blocked network, single-file artifact with no `<link>`), the system serif fallback still does the job: Georgia at 700 / −0.02em / 1.1 is more editorial than most people expect. Always design so the fallback looks intentional.
 

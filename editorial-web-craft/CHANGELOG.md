@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.5 — 2026-11-13
+
+- `examples/longread.html` loads GSAP pinned to 3.15.1 instead of the floating `gsap@3`.
+- `editorial-type-tokens`: no font pairing is a default that needs no justification. Every row of `pairings.md` is an example with its reason, and the formerly default row no longer carries an italic accent.
+- `tactile-interaction-curves`: one `--ease-out` token, `cubic-bezier(0.23, 1, 0.32, 1)`; UI exits use ease-out (an accelerate curve only for an element leaving the viewport over distance, at most 200ms); hover is gated with `(hover: hover) and (pointer: fine)`; the button recipe fades a pseudo-element instead of transitioning `box-shadow` (direct shadow transitions only for a handful of small controls).
+- `reduced-motion-enforcer`: the fallback guide no longer recommends a `0.01ms` blanket. It recommends the `no-preference` default, the property whitelist as a safety net, and explicit end states.
+- `gsap-timeline-orchestrator`: examples pin GSAP to an exact version (3.15.1), and `assets/entrance.js` releases a first-screen `data-reveal` that is still hidden after 2.5 seconds.
+- `sub-pixel-inertia-scroll`: the `kinetic-planes.css` comment no longer says Firefox has scroll-driven animations behind a flag; Firefox 159 shipped them on 2026-10-27.
+
 ## 1.0.4 — 2026-11-06
 
 - Six skill descriptions name HTML elements in plain words instead of angle-bracket tags, because claude.ai warns about tags and strips their brackets. No change in what the skills do.

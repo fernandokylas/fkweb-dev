@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 (2026-11-13)
+
+- `wp_guard` now asks for confirmation before Novamira commands that run code or sign in to a site (any `novamira run` of an ability not known to be read-only, such as `execute-php`, `run-wp-cli` or `execute-ability`, and `novamira auth`; the command is split into shell words first, so quoting, short options, a path or `npx @novamira/cli` cannot hide the verb) and before `wp elementor replace-urls`, `kit-import` and `library-import`. New tests cover each rule and the safe commands that stay allowed.
+- `wp-page-update` safety rules: Elementor V4 caution (atomic classes and variables cannot be applied to v3 widgets; inspect the page data before any programmatic edit; edit through the editor), `wp elementor flush-css` to regenerate CSS, `--skip-columns=guid` for search-replace, multisite scope (`--url`, `--network`) and batching of large changes.
+- `wp-site-audit` inside checks: `wp elementor system-info` and `wp elementor experiments-status` as read-only builder checks, and detection of Mosaic Builder (`wp-content/plugins/mosaic/`).
+
 ## 0.1.1 (2026-10-31)
 
 - Now installed from the `fkweb-dev` marketplace: `claude plugin marketplace add fernandokylas/fkweb-dev`, then `claude plugin install wp-essentials@fkweb-dev`. The `fernandokylas/sitewright` marketplace is retired. No change to the skills or the hook.

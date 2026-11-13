@@ -1,9 +1,10 @@
 /**
  * Choreographed section entrance with GSAP.
  *
- * Requires gsap (and ScrollTrigger for below-fold sections):
- *   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
- *   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+ * Requires gsap (and ScrollTrigger for below-fold sections). Pin the exact version (3.15.1)
+ * and keep it in your lock file or a fixed CDN URL; never load an unpinned "gsap@3":
+ *   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+ *   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
  *
  * Markup contract — mark what should animate, in reading order:
  *   <section data-entrance>
@@ -16,7 +17,9 @@
  *
  * CSS contract — hide only when a script can run, so no-JS users see content:
  *   @media (scripting: enabled) { [data-reveal] { visibility: hidden; } }
- *   and, in case GSAP itself fails to load, entranceAll() reveals everything.
+ *   and, in case GSAP itself fails to load, entranceAll() reveals everything. If GSAP loads but the
+ *   entrance never runs (an error, a stalled script), a release timeout (releaseMs, default 2500ms)
+ *   reveals any first-screen [data-reveal] still hidden, so the first screen never stays blank.
  *
  * Usage:
  *   entranceAll();                         // every [data-entrance]; first plays on load, rest on scroll
@@ -32,6 +35,7 @@ const DEFAULTS = {
   copyY: 15,
   scroll: true,         // play when the section enters the viewport
   scrollStart: 'top 80%',
+  releaseMs: 2500,      // after this, a first-screen [data-reveal] that is still hidden is shown
 };
 
 function entrance(section, opts = {}) {
@@ -69,6 +73,17 @@ function entranceAll(opts = {}) {
     return null;
   }
   if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+
+  // Release timeout: never leave first-screen content hidden if the entrance did not run.
+  const releaseMs = opts.releaseMs ?? DEFAULTS.releaseMs;
+  setTimeout(() => {
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (getComputedStyle(el).visibility === 'hidden' && el.getBoundingClientRect().top < window.innerHeight) {
+        el.style.visibility = 'visible';
+        el.style.opacity = '1';
+      }
+    });
+  }, releaseMs);
 
   const mm = gsap.matchMedia();
   mm.add('(prefers-reduced-motion: no-preference)', () => {

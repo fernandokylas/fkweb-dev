@@ -18,17 +18,17 @@ The model is physical: things at rest need a push to move (fast start), things i
 
 ## The three rules
 
-**1. Ease out, never linear, never `all`.** Motion uses a curve with a fast start and a long deceleration — `cubic-bezier(0.16, 1, 0.3, 1)` is the workhorse, `cubic-bezier(0.25, 1, 0.5, 1)` for smaller elements. Keep it under 300ms — that's the budget for the *visible* change to land; a spring recoil or settle tail (as in `magnetic-hitbox-warp`) may run on to ~400–450ms because the state has already arrived and only the last few pixels are still moving. `linear` is banned for *motion*; it's fine — actually preferable — for pure colour crossfades (`background-color 150ms linear`), which is what your eye expects from a tint change. `transition: all` is banned because it silently animates layout properties (`width`, `padding`, `height`) that jank, and makes the exit timing impossible to control.
+**1. Ease out, never linear, never `all`.** Motion uses a curve with a fast start and a long deceleration — `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)` is the one workhorse token (the same curve as Sitewright Full's motion-craft guide), `cubic-bezier(0.25, 1, 0.5, 1)` for smaller elements. UI exits use ease-out too, only shorter; an accelerate curve is for an element leaving the viewport over distance, at most 200ms. Keep it under 300ms — that's the budget for the *visible* change to land; a spring recoil or settle tail (as in `magnetic-hitbox-warp`) may run on to ~400–450ms because the state has already arrived and only the last few pixels are still moving. `linear` is banned for *motion*; it's fine — actually preferable — for pure colour crossfades (`background-color 150ms linear`), which is what your eye expects from a tint change. `transition: all` is banned because it silently animates layout properties (`width`, `padding`, `height`) that jank, and makes the exit timing impossible to control.
 
 **2. Enter slower than you leave.** Hover-in at 200–300ms feels considered; hover-out at 150–200ms feels responsive. Set the *exit* timing on the base rule and the *enter* timing on the `:hover` rule — that's the only way to get asymmetric durations in plain CSS:
 
 ```css
 .tactile-action {
-  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1),
               background-color 150ms linear;          /* exit timings */
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .tactile-action:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
@@ -37,7 +37,7 @@ The model is physical: things at rest need a push to move (fast start), things i
 }
 ```
 
-The `@media (hover: hover)` wrapper matters: on touch devices `:hover` sticks after a tap, leaving buttons floating in their lifted state. Only pointer devices get the hover layer.
+The `@media (hover: hover) and (pointer: fine)` wrapper matters: on touch devices `:hover` sticks after a tap, leaving buttons floating in their lifted state. Only fine-pointer devices get the hover layer. Transitioning `box-shadow` directly repaints every frame, so keep it to a handful of small controls; for cards and repeated elements fade the opacity of a pseudo-element that carries the shadow (the recipe is in `references/curves.md`).
 
 **3. Press is fast and physical.** `:active` compresses the element — `scale(0.97)` for buttons, `scale(0.98–0.985)` for larger cards (bigger surfaces need less shrink to feel the same) — over 60–100ms so it tracks the click instantly. Pair it with a shadow that drops back to rest: the element is being pushed *into* the page, not lifted off it.
 
@@ -55,14 +55,14 @@ Release uses the base rule's timing automatically, so the button springs back ov
 
 - **Tokenise the physics.** Two curves, three durations, two shadows in `:root` (`--ease-out`, `--dur-in`, `--dur-out`, `--dur-press`, `--shadow-rest`, `--shadow-hover`). Every component references them, so the whole page shares one material. Mixed beziers across components is the interactive equivalent of mixed fonts.
 - **Match the response to the element.** Buttons lift and compress. Cards lift more, compress less. List rows and menu items *don't* lift — a tint change at 120–150ms and at most `scale(0.995)`; rows that float in a list feel jittery. Toggles use a symmetric in-out curve because they travel both ways. `references/curves.md` has recipes for each, plus dropdown, modal, sheet, and staggered reveal.
-- **Only animate compositor properties.** `transform`, `opacity`, `box-shadow`, `filter`, colours. Never `width`, `height`, `margin`, `padding`, `top/left` — they trigger layout on every frame. Move with `transform: translate()`, grow with `transform: scale()`, reveal with `opacity` + `transform`.
+- **Only animate compositor properties.** `transform` and `opacity` run on the compositor; colours and `filter` are cheap on small elements; `box-shadow` repaints, so it is for a handful of small controls only. Never `width`, `height`, `margin`, `padding`, `top/left` — they trigger layout on every frame. Move with `transform: translate()`, grow with `transform: scale()`, reveal with `opacity` + `transform`.
 - **Focus is a state too.** `:focus-visible` gets a visible ring (`outline: 2px solid var(--accent-text); outline-offset: 2px`) — instantly, no transition. Keyboard users shouldn't wait for feedback.
 - **Respect reduced motion.** A `prefers-reduced-motion: reduce` block that collapses durations to ~0 but *keeps* the state changes (colour, shadow). Motion off ≠ feedback off.
 
 ## Quick check
 
 1. Search the CSS for `linear` on anything other than colour/opacity, and for `transition: all` — replace both.
-2. Every `:hover` that moves something is inside `@media (hover: hover)`.
+2. Every `:hover` that moves something is inside `@media (hover: hover) and (pointer: fine)`.
 3. Every primary button and clickable card has an `:active` with `scale()` and a short duration.
 4. Hover-out duration ≤ hover-in duration.
 5. Nothing animates `width`, `height`, `padding`, `margin`, or positional offsets.
