@@ -35,6 +35,8 @@ claude plugin disable <plugin>@fkweb-dev            # turn it off for now
 claude plugin uninstall <plugin>@fkweb-dev          # remove it
 ```
 
+Auto-update depends on how you added this marketplace. Added by hand in Claude Code (`/plugin marketplace add`), it is off by default. Added from claude.ai, it is on by default. From a Claude Code release on or after 30 November 2026, a marketplace listed in managed settings (`extraKnownMarketplaces`) also updates automatically unless its entry sets `"autoUpdate": false`. You can change auto-update for any marketplace in `/plugin` under Marketplaces. Details: https://code.claude.com/docs/en/discover-plugins (Keep plugins updated).
+
 Each plugin's README covers its own setup. Editorial's browser previews need Node and Chrome.
 
 ### Skills only, with npx

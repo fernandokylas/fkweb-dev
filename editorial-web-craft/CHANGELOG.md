@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.6 — 2026-11-24
+
+- The bundled Chrome DevTools server (`.mcp.json`) starts with `--no-usage-statistics` and `--no-performance-crux`: no usage statistics go to Google and page URLs from performance traces are not sent to the Chrome UX Report (CrUX) API. The README says so and how to turn either back on. The server is still `chrome-devtools-mcp@1` (not pinned). Flags confirmed in the chrome-devtools-mcp 1.13.0 README.
+- `encapsulated-mockup-builder`: `assets/boilerplate.html` no longer moves the hovered element. `.card` and `.btn` stay put as the hit area and an inner `.card-face` or `.btn-face` carries the lift, so the hover does not flicker at the element's edge. The button markup gains one inner span; a bare `.card` or `.btn` with no face inside keeps its surface and its colour change but never moves. Reduced-motion handling is unchanged. Idea adapted from impeccable's hover rule.
+- `web-craft` preview protocol: the width probe now says to write the requested width beside the `innerWidth` read back, and after a window resize a clamped width is `unavailable`, not `passed` (chrome-devtools-mcp, whose `resize_page` notes that Chrome can enforce a minimum window size); only device emulation is judged on `scrollWidth`. A computed `position: sticky` is no longer a pass for a sticky column: scroll in steps and compare bounding rectangles, with a worked probe (idea from mosaic-headless's sticky verification).
+- Credits: impeccable, chrome-devtools-mcp and mosaic-headless, ideas adapted in our own words; no code copied. `examples/dashboard.html`, `examples/case-study.html`, the `reduced-motion-enforcer` example (`.card-item:hover`) and `tactile-interaction-curves/references/curves.md` (`.btn:hover`) still use the old hover pattern and are unchanged in this release.
+
 ## 1.0.5 — 2026-11-13
 
 - `examples/longread.html` loads GSAP pinned to 3.15.1 instead of the floating `gsap@3`.

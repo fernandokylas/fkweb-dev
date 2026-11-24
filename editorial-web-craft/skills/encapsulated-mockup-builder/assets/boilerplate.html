@@ -80,9 +80,15 @@
 
     /* 3. Components */
     @layer components {
-    .card {
+    /* Hover never moves the element that owns the pointer: .card and .btn are fixed hit areas,
+       and the child (.card-face, .btn-face) carries the lift. If the hovered box itself moved,
+       the pointer could fall off its edge, the hover would end, the box would drop back, and it would flicker.
+       A bare .card or .btn (no face inside) still gets its surface and a colour change, but never moves. */
+    .card {                                     /* markup: <div class="card"><div class="card-face">…</div></div> */
       position: relative;
       isolation: isolate;                       /* a room: children stack locally */
+    }
+    .card:not(:has(> .card-face)), .card-face {
       background: var(--surface-card);
       border: 1px solid var(--rule);
       border-radius: var(--radius);
@@ -90,20 +96,28 @@
       transition: transform var(--transition-out), border-color var(--transition-out), box-shadow var(--transition-out);
     }
     @media (hover: hover) {
-      .card:hover { transform: translateY(-2px); border-color: var(--accent-solid); transition-duration: 260ms; }
+      .card:not(:has(> .card-face)):hover, .card:hover > .card-face { border-color: var(--accent-solid); transition-duration: 260ms; }
+      .card:hover > .card-face { transform: translateY(-2px); }
     }
-    .card:active { transform: translateY(0) scale(0.985); transition-duration: 80ms; }
-    .btn {
+    .card:active > .card-face { transform: translateY(0) scale(0.985); transition-duration: 80ms; }
+    .btn {                                      /* markup: <button class="btn"><span class="btn-face">…</span></button> */
+      display: inline-flex;
+      padding: 0; background: none; border: 0; border-radius: var(--radius);
+      font: inherit; font-weight: 600; color: inherit; cursor: pointer;
+    }
+    .btn:not(:has(> .btn-face)), .btn-face {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.5rem 1.25rem 0.55rem;          /* optical: heavier bottom */
       background: var(--accent-solid); color: var(--accent-on-solid);
-      border: 0; border-radius: var(--radius); font: inherit; font-weight: 600; cursor: pointer;
+      border-radius: var(--radius);
       transition: transform var(--transition-out), box-shadow var(--transition-out), background-color 150ms linear;
     }
     @media (hover: hover) {
-      .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgb(0 0 0 / 0.08); transition-duration: 260ms; }
+      .btn:not(:has(> .btn-face)):hover, .btn:hover > .btn-face { box-shadow: 0 4px 12px rgb(0 0 0 / 0.08); transition-duration: 260ms; }
+      .btn:hover > .btn-face { transform: translateY(-1px); }
     }
-    .btn:active { transform: translateY(0.5px) scale(0.97); box-shadow: none; transition-duration: 80ms; }
+    .btn:not(:has(> .btn-face)):active { box-shadow: none; transition-duration: 80ms; }
+    .btn:active > .btn-face { transform: translateY(0.5px) scale(0.97); box-shadow: none; transition-duration: 80ms; }
     .btn:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
     .btn svg { width: 1em; height: 1em; position: relative; top: -1px; } /* optical: cap-height */
     .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
@@ -141,7 +155,7 @@
   <main id="app-root" class="container">
     <h1>Prototype title</h1>
     <p>Replace this with the first section. Everything the page needs is already in this file.</p>
-    <p><button class="btn" type="button" data-action="demo"><span class="btn-label">Continue</span> <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button></p>
+    <p><button class="btn" type="button" data-action="demo"><span class="btn-face"><span class="btn-label">Continue</span> <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></button></p>
   </main>
 
   <script>

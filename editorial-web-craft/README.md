@@ -21,7 +21,7 @@ Each skill is small, opinionated, and explains *why* before it says *how*. Most 
 
 The plugin is listed in the [`fkweb-dev`](https://github.com/fernandokylas/fkweb-dev) marketplace. Pick the environment you use.
 
-**Claude Code** — plugin, with the `/editorial-web-craft:craft` command, the write-time audit hook, and a bundled Chrome DevTools MCP for previews:
+**Claude Code** — plugin, with the `/editorial-web-craft:craft` command, the write-time audit hook, and a bundled Chrome DevTools MCP for previews (started with Google usage statistics and CrUX sends switched off, see the note below):
 
 ```bash
 claude plugin marketplace add fernandokylas/fkweb-dev
@@ -39,6 +39,8 @@ npx skills add https://github.com/fernandokylas/fkweb-dev/tree/main/editorial-we
 
 **Local development** — `claude --plugin-dir ./editorial-web-craft`, or symlink: `for d in skills/*/; do ln -sfn "$PWD/${d%/}" ~/.claude/skills/$(basename $d); done`
 
+> The bundled DevTools server runs with `--no-usage-statistics` (no usage data sent to Google) and `--no-performance-crux` (page URLs from performance traces are not sent to Google's Chrome UX Report, CrUX, API), both set in `.mcp.json`. To switch either back on, delete that flag from the `args` list in `.mcp.json` (in a local `--plugin-dir` copy), or run the official `chrome-devtools-mcp` plugin alongside with your own settings.
+>
 > The DevTools MCP needs Node and Chrome. If you already run the official `chrome-devtools-mcp` plugin you'll see a second server with a different tool prefix — harmless; `web-craft` uses whichever is present.
 
 ---

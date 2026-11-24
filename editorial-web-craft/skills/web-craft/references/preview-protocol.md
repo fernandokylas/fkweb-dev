@@ -11,7 +11,7 @@ The audits catch what a script can catch. The preview is for the other half: doe
 
 ## 1. Three widths
 
-For each of `1280×900`, `768×1024`, `390×844`: `resize_page`, then `take_screenshot` (full page at 1280, viewport at the others is enough), then run the probe:
+For each of `1280×900`, `768×1024`, `390×844`: `resize_page`, then `take_screenshot` (full page at 1280, viewport at the others is enough), then run the probe. The probe reads `innerWidth` back as `vw`: write the width you asked for beside it (for example `requested 1280, vw 1280`). A window resize can be clamped (Chrome enforces a minimum window width, and a tool can cap the size). After a window resize, any difference between the two makes that width `unavailable`, not `passed`, and so is every measurement taken at it. A clamped window also reports `innerWidth` and `scrollWidth` above the width you asked for, so never read that as page overflow. Only with device emulation (the tool's own phone or device setting, not a window resize) is a difference expected: an emulated phone zooms out to fit an overflowing page and widens `innerWidth`, so judge that case on `scrollWidth` against the requested width and report the overflow as the finding.
 
 ```js
 () => {
@@ -28,7 +28,7 @@ For each of `1280×900`, `768×1024`, `390×844`: `resize_page`, then `take_scre
     horizontalOverflow: de.scrollWidth > innerWidth,             // must be false
     containerInsideViewport: c ? c.left >= 0 && c.right <= innerWidth : null,
     railStacksOnMobile: innerWidth < 720 && rail && copy ? rail.bottom <= copy.top + 1 : null,
-    railStickyOnDesktop: innerWidth >= 720 && rail ? getComputedStyle(q('.rail, .meta-rail')).position === 'sticky' : null,
+    railPositionComputed: innerWidth >= 720 && rail ? getComputedStyle(q('.rail, .meta-rail')).position : null, // 'sticky' here means the rule applied, not that anything sticks
     breakoutInsideContainer: brk && c ? brk.left >= c.left - 1 && brk.right <= c.right + 1 : null,
     breakoutClearsRail: brk && rail && innerWidth >= 720 ? brk.left >= rail.right - 1 : null,
     copyMeasureCh: copyW ? Math.round(copyW) : null,               // ≤ ~66 on desktop
@@ -38,7 +38,30 @@ For each of `1280×900`, `768×1024`, `390×844`: `resize_page`, then `take_scre
 }
 ```
 
-Pass: `horizontalOverflow === false` at all three widths; rail sticky at 1280, stacked above copy at 390; breakout inside the container and clear of the rail; measure ≤ ~66ch at 1280.
+Pass: `horizontalOverflow === false` at all three widths; rail stuck while scrolling at 1280 (the sticky check below), stacked above copy at 390; breakout inside the container and clear of the rail; measure ≤ ~66ch at 1280.
+
+**Sticky or pinned columns.** A computed `position: sticky` is not evidence: an ancestor with `overflow` set, a parent no taller than the column, or a missing `top` offset leaves the rule applied and the column unstuck. At 1280, scroll in steps through the column's parent and compare bounding rectangles:
+
+```js
+async () => {
+  const rail = document.querySelector('.rail, .meta-rail, [class*="rail"]');
+  if (!rail) return JSON.stringify({ rail: null });
+  const parent = rail.parentElement;
+  const parentTop = scrollY + parent.getBoundingClientRect().top;
+  const span = Math.max(parent.getBoundingClientRect().height - innerHeight, 0);
+  const rows = [];
+  for (let i = 0; i <= 4; i++) {
+    scrollTo(0, parentTop + (span * i) / 4);
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+    const a = rail.getBoundingClientRect(), p = parent.getBoundingClientRect();
+    rows.push({ step: i, railTop: Math.round(a.top), parentTop: Math.round(p.top) });
+  }
+  scrollTo(0, 0);
+  return JSON.stringify({ computed: getComputedStyle(rail).position, rows });
+}
+```
+
+Pass: `railTop` holds one value (the sticky offset) across the middle steps while `parentTop` falls. `failed`: `railTop` falls by about the same amount as `parentTop` (the column scrolls away, whatever `computed` says). If the page cannot be scrolled in this session (a short page, a tool that cannot scroll), or `parentTop` is the same at every step (the parent is no taller than the viewport, or the wrong element was taken as the parent), nothing was measured and the sticky check is `unavailable`, not `passed`. Report the rows, not only the verdict.
 
 Then **look at the screenshots** — this is the part no script does:
 - Hierarchy: can you tell in one glance what the page is about and where to start reading?
