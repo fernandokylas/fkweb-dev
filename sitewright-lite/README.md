@@ -2,11 +2,17 @@
 
 **The free demo of Sitewright.** It runs the complete website workflow in Claude Code: plan, design, build and verify, with two build paths: custom code (plain HTML/CSS/JS or a framework app) and WordPress (block themes).
 
-The full edition of Sitewright adds content and copywriting, SEO and AI-search visibility, launch preparation, design refinement, WordPress code review, two independent review agents and the Editorial craft specialists. New skills go there. It isn't publicly available yet.
+The full edition of Sitewright adds content and copywriting, SEO and AI-search visibility, launch preparation, design refinement, WordPress code review, two independent review agents and the Editorial craft specialists. New skills go there. It is part of the private fkweb-dev-pro set: ask through [contact.fernandokylas.com](https://contact.fernandokylas.com/).
 
-Lite is maintained with bug and security fixes.
+| | Lite (free) | Sitewright (Pro) |
+|---|---|---|
+| Plan, design, build, verify | Yes | Yes, plus headless WordPress with Astro and custom WordPress plugins and blocks |
+| Page checklists (404, FAQ, footer, About, features, testimonials) | Checked by hand | Checked automatically, with evidence |
+| Content, SEO and AI search, launch, design refinement | | Yes |
 
-Version 0.3.5. See `CHANGELOG.md` for what changed and its known limitations.
+Lite gets bug and security fixes, plus small free additions that show what the full edition automates.
+
+Version 0.4.0. See `CHANGELOG.md` for what changed and its known limitations.
 
 ## Quick start
 
@@ -198,4 +204,5 @@ Each of these needs your explicit go-ahead in the conversation.
 ## Licence and credits
 
 - **Sitewright lite's own work:** MIT, in `LICENSE`.
+- **The page checklists** (`skills/website-verify/references/page-checklists/`): the checklist text is © 2026 Fernando Kylas (fkweb-dev), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Reuse it freely with credit and a link to fkweb-dev.
 - **Credits:** projects whose ideas informed the original guidance are listed in `NOTICE.md`.

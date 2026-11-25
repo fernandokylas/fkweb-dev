@@ -55,3 +55,7 @@ Sitewright lite can use tools the user already has, such as:
 Each of these has its own licence and terms. The package never installs or downloads them. `skills/website-workflow/references/optional-integrations.md` describes each one: what it costs, what data it sends off the machine, and what it falls back to when missing.
 
 Websites built with Sitewright lite can load fonts, images or scripts chosen in the project. Those assets carry their own licences, recorded per asset in the project's assets record.
+
+## Checklist text
+
+The page checklists in `skills/website-verify/references/page-checklists/` are © 2026 Fernando Kylas (fkweb-dev), licensed under Creative Commons Attribution 4.0 International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). The rest of this package is MIT (`LICENSE`). Each checklist item cites its public sources; those sources keep their own terms.

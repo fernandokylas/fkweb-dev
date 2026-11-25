@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0 — 2026-11-25
+
+### Added
+
+- **Page checklists, checked by hand:** `skills/website-verify/references/page-checklists/` holds item-by-item lists for six page types: 404, FAQ, site footer, About, features, and testimonials and reviews (76 items). Each item says what must be true, how to check it, what passes, and its public sources (WCAG 2.2, Google Search Central, the GOV.UK Design System, the ASA CAP Code, the FTC Endorsement Guides, the GDPR, Nielsen Norman Group). `website-verify` points to them for a by-hand review. Items the full edition checks automatically say so. The checklist text is CC BY 4.0 (see `NOTICE.md`); the rest of Lite stays MIT.
+
+### Changed
+
+- Lite now gets small free additions that show what the full edition automates, as well as bug and security fixes. The README has a Lite and Pro comparison and says how to ask for Pro.
+
 ## 0.3.5 — 2026-11-13
 
 ### Fixed

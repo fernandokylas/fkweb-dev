@@ -1,14 +1,30 @@
 # fkweb-dev
 
-Fernando Kylas's Claude Code plugin marketplace. It lists three plugins, and each one installs on its own: pick the ones you need.
+**Claude Code plugins for building, checking and launching websites, by Fernando Kylas.** This is the free set. Each plugin installs on its own: pick the ones you need.
 
 | Plugin | Pick it if you want | Contents | Needs |
 |---|---|---|---|
+| [`sitewright-lite`](sitewright-lite/) | The website workflow: plan, design, build (custom code or a WordPress block theme) and verify, plus by-hand page checklists (404, FAQ, footer, About, features, testimonials) and the WordPress essentials | 12 skills, hooks, scripts | Python 3.9+ |
 | [`wp-essentials`](wp-essentials/) | Only WordPress chores: setting up a fresh install, safe page edits, a read-only audit, a launch gate | 4 skills, 1 hook | Python 3.9+ |
-| [`sitewright-lite`](sitewright-lite/) | The free demo of Sitewright: the website workflow, plan → design → build (custom code or WordPress block theme) → verify, plus the WordPress essentials | 12 skills, 4 hooks | Python 3.9+ |
-| [`editorial-web-craft`](editorial-web-craft/) | Editorial-grade web interfaces: ledger layouts, fluid type, optical polish, dual-ground colour, tactile motion, and audits that keep it honest | 21 skills, 1 command, 1 hook, Chrome DevTools MCP | Python 3; Node and Chrome for previews |
+| [`editorial-web-craft`](editorial-web-craft/) | Editorial-grade web interfaces: ledger layouts, fluid type, optical polish, dual-ground colour, tactile motion, and audits that keep it honest | 21 skills | Python 3.9+; Node and Chrome for previews |
 
 `sitewright-lite` already contains the `wp-essentials` skills, so install one of those two, not both.
+
+## Free and Pro
+
+The free plugins do the work by hand where Pro automates it. Pro is the private fkweb-dev-pro set.
+
+| | Free (this repository) | Pro (fkweb-dev-pro) |
+|---|---|---|
+| Plan, design, build, verify | Sitewright Lite | Sitewright, with more build paths (headless WordPress with Astro, custom plugins and blocks) |
+| Page checklists | Checked by hand | Checked automatically, with evidence for each item |
+| Content and copy | | Copywriting, landing pages, case studies, AI-sounding text checks |
+| SEO and AI search | | Indexability, structured data, multilingual and local SEO, answer-engine readiness; SEO Lab for client audits and monitoring |
+| Launch | | Security headers, redirects, consent-safe analytics, go-live checklist |
+| Design review | Editorial Web Craft audits | Design refinement and two independent review agents |
+| Google Search Console and GA4 | | Google Toolkit: reports, property setup, sitemaps, PageSpeed |
+
+**Get Pro:** ask through [contact.fernandokylas.com](https://contact.fernandokylas.com/).
 
 ## Install
 
@@ -36,6 +52,8 @@ claude plugin uninstall <plugin>@fkweb-dev          # remove it
 ```
 
 Auto-update depends on how you added this marketplace. Added by hand in Claude Code (`/plugin marketplace add`), it is off by default. Added from claude.ai, it is on by default. From a Claude Code release on or after 30 November 2026, a marketplace listed in managed settings (`extraKnownMarketplaces`) also updates automatically unless its entry sets `"autoUpdate": false`. You can change auto-update for any marketplace in `/plugin` under Marketplaces. Details: https://code.claude.com/docs/en/discover-plugins (Keep plugins updated).
+
+In the Claude desktop app or on claude.ai, add the marketplace `fernandokylas/fkweb-dev` in Claude's plugin settings, then turn on the plugin you want.
 
 Each plugin's README covers its own setup. Editorial's browser previews need Node and Chrome.
 
@@ -67,7 +85,7 @@ More in [`SECURITY.md`](SECURITY.md).
 
 ## Licence
 
-This repository's own files are MIT, © 2026 Fernando Kylas (`LICENSE`). Each plugin carries its own licence file: `wp-essentials`, `sitewright-lite` and `editorial-web-craft` are MIT.
+This repository's own files are MIT, © 2026 Fernando Kylas (`LICENSE`). Each plugin carries its own licence file: `wp-essentials`, `sitewright-lite` and `editorial-web-craft` are MIT. The page checklists in `sitewright-lite` are CC BY 4.0: reuse them with credit and a link to fkweb-dev.
 
 ## Contributing
 
