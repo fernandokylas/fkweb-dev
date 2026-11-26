@@ -4,5 +4,9 @@
   "bad-ink.css":          {"ink": 3},
   "bad-zindex.css":       {"z-index": 5},
   "good-tokens.css":      {"ink": 0, "layers": 0},
-  "motion-unguarded.css": {"motion": 1}
+  "motion-unguarded.css": {"motion": 1},
+  "region-pattern.html":  {"semantics": 0},
+  "bad-region.html":      {"semantics": 4},
+  "zindex-empty-decoration.html": {"z-index": 0},
+  "zindex-card-with-children.html": {"z-index": 0}
 }

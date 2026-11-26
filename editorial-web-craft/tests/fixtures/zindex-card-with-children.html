@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card with children creating a stacking context</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root { --z-base: 0; --z-raised: 10; --z-overlay: 100; }
+.card { transform: translateZ(0); }
+.card-bar { transform: translateZ(0); height: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Card</h1>
+  <div class="card"><p>Has a child</p></div>
+  <div class="card-bar"></div>
+  <div class="card-bar"><span class="tip">child</span></div>
+</main>
+</body>
+</html>

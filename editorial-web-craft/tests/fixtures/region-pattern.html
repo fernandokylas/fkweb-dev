@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scrollable region pattern</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<main>
+  <h1>Readings</h1>
+  <h2 id="table-title">Wide table</h2>
+  <div role="region" aria-labelledby="table-title" tabindex="0" class="scroll-region">
+    <table><tr><th scope="col">A</th><th scope="col">B</th></tr><tr><td>1</td><td>2</td></tr></table>
+  </div>
+  <div role="region" aria-label="Code sample" tabindex="0" class="scroll-region"><pre>one two</pre></div>
+  <section aria-labelledby="table-title"><p>Named by the heading above.</p></section>
+  <section aria-label="Notes"><p>Named by its own label.</p></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unnamed or wrong focusables</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<main>
+  <h1>Readings</h1>
+  <div role="region" tabindex="0" class="scroll-region"><p>Region with no name.</p></div>
+  <span aria-label="Looks named" tabindex="0">Named, but not a region.</span>
+  <div role="region" aria-label="" tabindex="0"><p>Empty label.</p></div>
+  <div tabindex="0">Plain fake focusable.</div>
+</main>
+</body>
+</html>

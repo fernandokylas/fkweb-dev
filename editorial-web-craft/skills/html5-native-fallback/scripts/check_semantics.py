@@ -6,20 +6,31 @@ Usage:  check_semantics.py page.html [more.html ...]
 FAIL:
   - onclick / role=button on <div>, <span>, <a>
   - <a href="#"> or <a href="javascript:…"> used as a button
-  - <div>/<span> with tabindex (fake focusables)
+  - <div>/<span> with tabindex (fake focusables), except the scrollable-region pattern:
+    role="region" with a non-empty aria-label or aria-labelledby
   - accordion-shaped markup (class contains accordion|collapse|disclosure) without <details>
   - modal-shaped markup (class/id contains modal|dialog) without <dialog>
   - no <main>; more than one <main>
   - heading levels that skip (h2 → h4)
 WARN:
   - <button> without type
-  - <section> without a heading
+  - <section> without a heading (not warned when its opening tag has a non-empty aria-label or
+    aria-labelledby: the section is named without one)
   - multiple <nav> without aria-label
   - <img> without alt
 """
 import re
 import sys
 from pathlib import Path
+
+
+def has_accessible_name(tag: str) -> bool:
+    """True when an opening tag carries a non-empty aria-label or aria-labelledby."""
+    return bool(re.search(r"\baria-label(?:ledby)?\s*=\s*(?:\"[^\"]*[^\"\s][^\"]*\"|'[^']*[^'\s][^']*')", tag, re.I))
+
+
+def is_named_region(tag: str) -> bool:
+    return bool(re.search(r"\brole\s*=\s*[\"']region[\"']", tag, re.I)) and has_accessible_name(tag)
 
 
 def main() -> None:
@@ -38,7 +49,9 @@ def main() -> None:
             fails.append(f"role=button on <{m.group(1)}> — use <button>")
         for m in re.finditer(r"<a\b[^>]*\bhref\s*=\s*[\"'](#|javascript:[^\"']*)[\"']", body, re.I):
             fails.append(f"<a href=\"{m.group(1)}\"> acting as a button — use <button>")
-        for m in re.finditer(r"<(div|span)\b[^>]*\btabindex\s*=", body, re.I):
+        for m in re.finditer(r"<(div|span)\b[^>]*\btabindex\s*=[^>]*>", body, re.I):
+            if is_named_region(m.group(0)):      # scrollable region: focusable on purpose, named
+                continue
             fails.append(f"tabindex on <{m.group(1)}> — fake focusable; use a native control")
 
         has_details = bool(re.search(r"<details\b", body, re.I))
@@ -63,8 +76,10 @@ def main() -> None:
         for m in re.finditer(r"<button\b(?![^>]*\btype\s*=)[^>]*>", body, re.I):
             warns.append("<button> without type (defaults to submit inside forms)")
             break
-        for m in re.finditer(r"<section\b[^>]*>(.*?)</section>", body, re.I | re.S):
-            if not re.search(r"<h[1-6]\b", m.group(1), re.I):
+        for m in re.finditer(r"(<section\b[^>]*>)(.*?)</section>", body, re.I | re.S):
+            if has_accessible_name(m.group(1)):
+                continue
+            if not re.search(r"<h[1-6]\b", m.group(2), re.I):
                 warns.append("<section> without a heading — probably a <div>")
                 break
         navs = re.findall(r"<nav\b[^>]*>", body, re.I)

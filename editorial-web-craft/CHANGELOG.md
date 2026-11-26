@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.7 — 2026-11-26
+
+- `html5-native-fallback`: `check_semantics.py` no longer fails "tabindex on div/span" for the recommended scrollable-region pattern, an element with `role="region"` and a non-empty `aria-label` or `aria-labelledby`, and no longer warns "section without a heading" for a section whose opening tag has a non-empty `aria-label` or `aria-labelledby`. An unnamed region, a named element that is not a region, and an empty label still fail or warn as before.
+- `z-index-coordinate-matrix`: `check_zindex.py` skips the stacking-context warning when an HTML file is given with the CSS and every element the selector matches (by its class or id) is empty. CSS alone, an unmatched selector or a selector with children still warn, and the message now reads "if this element has children".
+- Tests: `tests/test_checkers.py` and four new fixtures pin both behaviours.
+
 ## 1.0.6 — 2026-11-24
 
 - The bundled Chrome DevTools server (`.mcp.json`) starts with `--no-usage-statistics` and `--no-performance-crux`: no usage statistics go to Google and page URLs from performance traces are not sent to the Chrome UX Report (CrUX) API. The README says so and how to turn either back on. The server is still `chrome-devtools-mcp@1` (not pinned). Flags confirmed in the chrome-devtools-mcp 1.13.0 README.

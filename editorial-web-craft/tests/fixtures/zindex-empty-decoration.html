@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Decorative element with no children</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root { --z-base: 0; --z-raised: 10; --z-overlay: 100; }
+.card-bar { transform: translateZ(0); height: 4px; }
+.card-body { position: relative; z-index: var(--z-raised); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Decorative bar</h1>
+  <div class="card-bar"></div>
+  <div class="card-bar">
+  </div>
+  <div class="card-body"><p>Text</p></div>
+</main>
+</body>
+</html>
