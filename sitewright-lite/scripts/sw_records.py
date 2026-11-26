@@ -39,7 +39,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 TOOL = "sw_records"
-TOOL_VERSION = "4"
+TOOL_VERSION = "5"
 RESULTS = ("passed", "failed", "unavailable", "error", "stale", "skipped")
 OVERALL_ORDER = ("failed", "error", "stale", "unavailable", "skipped")
 PHASES = ("context", "structure", "direction", "prototype", "implement", "verify", "handoff")
@@ -77,7 +77,7 @@ EVIDENCE_FIELDS = ("check_id", "target", "result", "required_or_optional", "meth
                    "skip_reason_when_applicable")
 # Optional record fields (all absent in records written before 0.1.0-rc.3, which count for every mode).
 OPTIONAL_EVIDENCE_FIELDS = ("inputs", "mode", "exclusions", "evidence_sha256", "sample_scope", "supplied_by",
-                            "judged")
+                            "judged", "evidence_mtime")
 # Optional top-level keys of verification.json (append-only log written by `require`).
 OPTIONAL_VERIFICATION_KEYS = ("requirement_history", "runs_in_progress", "accepted_findings", "recurring_warnings")
 RECURRING_RUNS = 3   # status lists a warning seen in this many helper runs in a row
@@ -110,7 +110,8 @@ HANDOVER_MAX = 8192             # bytes: a handover a fresh session reads in ful
 ABSOLUTE_PATH = re.compile(r"(?:^|[\s\"'=(`])(/(?:Users|home|Volumes|private|tmp|var|opt|mnt|srv|root)/[^\s\"'`)]*"
                            r"|[A-Za-z]:[\\/][^\s\"'`)]*)")
 NAMED_PATH = re.compile(r"(?<![\w<$/.-])((?:\./)?[\w.-]+(?:/[\w.-]+)+\.(?:json|md|html|css|js|csv|txt|xml|php))\b")
-CREATES_PATH = re.compile(r"\b(?:create|write|draft|add|generate|make|build|save|export)\b[^.;]{0,40}$", re.I)
+# a dot inside a file name (404.html) does not end the "creating" clause; a dot before a space does
+CREATES_PATH = re.compile(r"\b(?:create|write|draft|add|generate|make|build|save|export)\b(?:[^.;]|\.(?=\w)){0,80}$", re.I)
 # Draft markers left in copy or records. One source: sw_site_check.py builds its page-text pattern
 # from PLACEHOLDER_MARKERS. "verify"/"confirm" count only in note forms ("(verify …", "[confirm …",
 # "verify:") so ordinary copy such as "verify your email" is not flagged.
@@ -154,6 +155,29 @@ class Report:
 
 def now_iso():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def stamp_seconds(value):
+    """Whole epoch seconds of an ISO 8601 timestamp with a timezone, or None when it is not one."""
+    if not isinstance(value, str):
+        return None
+    try:
+        moment = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return None if moment.tzinfo is None else int(moment.timestamp() // 1)
+
+
+def seconds_iso(seconds):
+    return datetime.datetime.fromtimestamp(seconds, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def written_after(evidence_seconds, earlier_stamp):
+    """True when an evidence file written at `evidence_seconds` (whole epoch seconds) is strictly newer than
+    the earlier record's timestamp, so identical bytes still come from a new run. A file written in the same
+    second, an older file, or a timestamp that cannot be read is not newer."""
+    before = stamp_seconds(earlier_stamp)
+    return evidence_seconds is not None and before is not None and evidence_seconds > before
 
 
 # File hashes seen in this process, keyed by what stat reports, so a file read for several records
@@ -262,7 +286,7 @@ def parse_records(texts):
                 name, value = fm.group(2), fm.group(3).strip()
                 target[name] = value
                 target.setdefault("_lines", {})[name] = f"{source}:{lineno}"
-                pending = (target, len(fm.group(1)), name) if not value else None
+                pending = (target, len(fm.group(1)), name)
                 continue
             if pending and line.strip() and (len(line) - len(line.lstrip())) > pending[1]:
                 tgt, _, name = pending
@@ -984,6 +1008,10 @@ def evidence_problems(rec):
             problems.append(f"`{name}` must be a string")
     if "evidence_sha256" in rec and not (isinstance(rec["evidence_sha256"], str) and SHA_RE.match(rec["evidence_sha256"])):
         problems.append("malformed `evidence_sha256`: expected sha256:<64 hex>")
+    if "evidence_mtime" in rec and not (isinstance(rec["evidence_mtime"], str)
+                                        and TIMESTAMP_RE.match(rec["evidence_mtime"])
+                                        and stamp_seconds(rec["evidence_mtime"]) is not None):
+        problems.append("malformed `evidence_mtime`: expected ISO 8601 with a timezone, like `timestamp`")
     if "judged" in rec:
         problems.extend(judged_problems(rec["judged"], rec.get("inputs")))
     if "exclusions" in rec:
@@ -1174,6 +1202,17 @@ def project_rel(root, path):
         return Path(os.path.abspath(path)).relative_to(os.path.abspath(root)).as_posix()
     except ValueError:
         return Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
+
+
+def evidence_mtime_seconds(root, evidence):
+    """Modification time of the evidence file in whole epoch seconds (truncated), or None when unreadable."""
+    path, err = resolve_target(root, evidence)
+    if err:
+        return None
+    try:
+        return int(path.stat().st_mtime // 1)
+    except OSError:
+        return None
 
 
 def evidence_file(root, evidence, digest=None):
@@ -1491,7 +1530,10 @@ def by_pair(records):
 
 def reused_evidence(records, rec, index=None):
     """True when a passed record cites evidence byte-identical to what an earlier record of the same
-    check cited for a different target state: the pass was copied forward, not produced by a new run."""
+    check cited for a different target state: the pass was copied forward, not produced by a new run.
+    Identical bytes still count as a new run when the record's `evidence_mtime` is later than the earlier
+    record's `timestamp` (the file was written again); a record without `evidence_mtime` is judged on bytes."""
+    mtime = stamp_seconds(rec.get("evidence_mtime"))
     digest = rec.get("evidence_sha256")
     if not digest:
         return False
@@ -1501,7 +1543,8 @@ def reused_evidence(records, rec, index=None):
         if earlier is rec:
             return False
         if isinstance(earlier, dict) and pair(earlier) == pair(rec) and earlier.get("evidence_sha256") == digest \
-                and (earlier.get("source_revision_or_target_fingerprint"), earlier.get("inputs") or {}) != state:
+                and (earlier.get("source_revision_or_target_fingerprint"), earlier.get("inputs") or {}) != state \
+                and not written_after(mtime, earlier.get("timestamp")):
             return True
     return False
 
@@ -1620,9 +1663,12 @@ def evaluate(data, root, vpath, mode, stage=None):
                 if found:
                     result, reason = found
                 elif result == "passed" and reused_evidence(records, rec, index):
-                    result, reason = "stale", ("evidence reused: the cited file is unchanged from an earlier "
-                                               "record of this check made on a different target state, so no new "
-                                               "run is shown; re-run the check and record its new output")
+                    result, reason = "stale", ("evidence reused: the cited file is byte-identical to the evidence "
+                                               "of an earlier record of this check made on a different target "
+                                               "state, and was not rewritten since, so no new run is shown; rerun "
+                                               "the check so it writes the evidence file again (or pass "
+                                               "--append-unchanged to record a real rerun on purpose), and never "
+                                               "cite an old file")
                 if result == "skipped":
                     why = rec.get("skip_reason_when_applicable", "")
                     reason = "required check skipped (not run); counts as unmet" + (f": {why}" if why else "")
@@ -2443,7 +2489,9 @@ def norm_route(route):
 
 
 def page_contracts(folder):
-    """({normalised route: page contract}, [record files read]) from the Markdown records in `folder`."""
+    """({normalised route: page contract}, [record files that supplied a `### Page:` block]) from the Markdown
+    records in `folder`. Other records (HANDOVER.md, brief.md ...) are read but not returned, so editing them
+    does not stale a check that takes the returned files as inputs."""
     texts, files = [], []
     for p in sorted(Path(folder).glob("*.md")):
         try:
@@ -2452,7 +2500,8 @@ def page_contracts(folder):
         except (OSError, UnicodeDecodeError):
             continue
     pages = parse_records(texts).get("sitemap", {}).get("pages", {})
-    return {norm_route(r): c for r, c in pages.items()}, files
+    sources = {str(c.get("_loc", "")).rsplit(":", 1)[0] for c in pages.values()}
+    return {norm_route(r): c for r, c in pages.items()}, [p for p in files if p.name in sources]
 
 
 def site_routes(vpath):
@@ -2902,7 +2951,7 @@ _ARCHIVED = {}
 
 
 def archived_states(archive):
-    """{pair: [(evidence_sha256, state)]} of archived records that cite hashed evidence (read once)."""
+    """{pair: [(evidence_sha256, state, timestamp)]} of archived records that cite hashed evidence (read once)."""
     key = str(archive)
     if key not in _ARCHIVED:
         out = {}
@@ -2918,7 +2967,7 @@ def archived_states(archive):
                     if isinstance(rec, dict) and rec.get("evidence_sha256") and isinstance(rec.get("target"), str):
                         out.setdefault(pair(rec), []).append(
                             (rec["evidence_sha256"], (rec.get("source_revision_or_target_fingerprint"),
-                                                      rec.get("inputs") or {})))
+                                                      rec.get("inputs") or {}), rec.get("timestamp")))
         except OSError:
             pass
         _ARCHIVED[key] = out
@@ -3107,13 +3156,19 @@ def add_record(data, args, root, vpath, report, label=""):
     if rec["evidence_path"] and not is_url(rec["evidence_path"]) \
             and evidence_file(root, rec["evidence_path"], digest) is None and digest:
         rec["evidence_sha256"] = digest[0]
+        written = evidence_mtime_seconds(root, rec["evidence_path"])
+        if written is not None:
+            rec["evidence_mtime"] = seconds_iso(written)
     if rec["result"] == "passed" and rec.get("evidence_sha256"):
         state = (rec["source_revision_or_target_fingerprint"], rec["inputs"])
-        if any(d == rec["evidence_sha256"] and s != state
-               for d, s in archived_states(archive_path(vpath)).get(pair(rec), [])):
-            return refuse("stale: evidence reused: the cited file is unchanged from an archived record of this "
-                          "check made on a different target state, so no new run is shown; re-run the check "
-                          "and record its new output")
+        written = stamp_seconds(rec.get("evidence_mtime"))
+        if any(d == rec["evidence_sha256"] and s != state and not written_after(written, stamp)
+               for d, s, stamp in archived_states(archive_path(vpath)).get(pair(rec), [])):
+            return refuse("stale: evidence reused: the cited file is byte-identical to the evidence of an "
+                          "archived record of this check made on a different target state, and was not "
+                          "rewritten since, so no new run is shown; rerun the check so it writes the evidence "
+                          "file again (or pass --append-unchanged to record a real rerun on purpose), and never "
+                          "cite an old file")
     markers = data.get("runs_in_progress") if isinstance(data.get("runs_in_progress"), list) else []
     begun = [m for m in markers if marker_applies(m, rec["check_id"], rec["target"], args.mode)]
     for m in begun:
@@ -3144,14 +3199,15 @@ class Unchanged(dict):
 
 # Fields an identical rerun may differ in: when it ran and the output file it wrote (helper output
 # carries its own timestamp and duration, so its hash differs on every run).
-RERUN_FIELDS = ("timestamp", "evidence_path", "evidence_sha256")
+RERUN_FIELDS = ("timestamp", "evidence_path", "evidence_sha256", "evidence_mtime")
 
 
 def unchanged_from(records, rec, root, vpath):
     """The current record that `rec` would only repeat, or None. It must be the newest record of the pair
     in rec's mode with no later record of the pair that counts for the same mode, still current and
     sound, and equal to `rec` in every field but RERUN_FIELDS. When both cite the same evidence file and
-    the file changed, the old record no longer matches its file, so nothing is reused."""
+    the file changed, the old record no longer matches its file, so nothing is reused. An old pass the gate
+    reports stale as reused evidence is never repeated: the rerun that replaces it must be written."""
     mode = rec.get("mode")
     for old in reversed(records):
         if not isinstance(old, dict) or pair(old) != pair(rec):
@@ -3166,6 +3222,8 @@ def unchanged_from(records, rec, root, vpath):
         if old.get("evidence_path") == rec.get("evidence_path") \
                 and old.get("evidence_sha256") != rec.get("evidence_sha256"):
             return None
+        if old.get("result") == "passed" and reused_evidence(records, old):
+            return None     # the gate calls the old pass stale (evidence reused): the rerun is the fix, so write it
         return old
     return None
 

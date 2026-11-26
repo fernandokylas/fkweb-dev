@@ -42,7 +42,7 @@ If there isn't one, read `references/no-browser.md`: record each required `brows
 ## 4. Stress cases and motion review
 
 - Read `references/stress-cases.md` and run the cases that apply: long and translated text, missing images, empty, one and many items, 200% and 400% zoom.
-- To review a 404, FAQ, footer, About, features or testimonials page by hand, use its list in `references/page-checklists/`.
+- To review a 404, FAQ, footer, About, features or testimonials page by hand, use its list in `references/page-checklists/`. Give each item its own row and one result: passed, failed, skipped (with the reason) or unavailable (what would settle it), never "partly". Where an item says Sitewright (Pro) checks this automatically, keep that note on that item's row only; never sum up which items Pro checks.
 - Where the site has motion, read `references/motion-review.md` and review it by purpose, frequency, reduced-motion behaviour and lifecycle.
 
 ## 5. Record and gate

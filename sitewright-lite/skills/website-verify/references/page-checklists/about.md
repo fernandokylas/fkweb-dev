@@ -8,7 +8,7 @@ What an About page needs so visitors can tell who is behind the site and whether
 
 Use when: The About, company, team or "who we are" page.
 
-Updated 2026-11-25. 11 items, checked by hand. Record each as passed, failed, skipped (with the reason) or unavailable (with what would settle it). No score.
+Updated 2026-11-25. 11 items, checked by hand. Record each item on its own row as passed, failed, skipped (with the reason) or unavailable (with what would settle it), and no other word. No score. An item whose heading ends "Pro checks this automatically" keeps that note on its own row; the other items do not get it.
 
 ## about-01 · warning
 
@@ -26,7 +26,7 @@ The first lines say what the business does and for whom, before any history.
 - Pass: They name the offer and the audience. The history comes later, if at all.
 - Sources: [Nielsen Norman Group: About Us information on websites](https://www.nngroup.com/articles/about-us-information-on-websites/)
 
-## about-03 · critical
+## about-03 · critical · Pro checks this automatically
 
 Every figure, client name, award or credential can be checked and was supplied by the owner.
 
@@ -51,7 +51,7 @@ Team members are listed with name, role and a short, relevant background.
 - Pass: Each person shown has a name, a role and one or two lines of relevant experience.
 - Sources: [Nielsen Norman Group: About Us information on websites](https://www.nngroup.com/articles/about-us-information-on-websites/)
 
-## about-06 · warning
+## about-06 · warning · Pro checks this automatically
 
 How the business works is described with specifics, not generic adjectives.
 
@@ -60,7 +60,7 @@ How the business works is described with specifics, not generic adjectives.
 - Sources: fkweb-dev house rule: no generic AI-look tells (stock phrases, identical icon cards, vague adjectives); [Google Search Central: creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## about-07 · info
+## about-07 · info · Pro checks this automatically
 
 The page ends with a next step: contact, booking or the main offer.
 
@@ -69,7 +69,7 @@ The page ends with a next step: contact, booking or the main offer.
 - Sources: fkweb-dev house rule: one primary action per page, repeated where the reader is ready
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## about-08 · info
+## about-08 · info · Pro checks this automatically
 
 Organization structured data, where used, matches the facts on the page.
 
@@ -86,7 +86,7 @@ Dated facts are current.
 - Pass: Nothing is out of date.
 - Sources: [Google Search Central: creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 
-## about-10 · info
+## about-10 · info · Pro checks this automatically
 
 The page is organised with descriptive headings.
 
@@ -95,7 +95,7 @@ The page is organised with descriptive headings.
 - Sources: [WCAG 2.2, 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels); [WCAG 2.2, 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## about-11 · info
+## about-11 · info · Pro checks this automatically
 
 The title and meta description are unique and say what the page is.
 

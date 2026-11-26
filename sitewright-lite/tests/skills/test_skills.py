@@ -154,6 +154,23 @@ class SkillStructureTest(unittest.TestCase):
                        "UI/UX Pro Max", "Huashu", "claude-blog", "claude-seo", "img2threejs"):
             self.assertIn(source, notice, source)
 
+    def test_manual_review_keeps_the_pro_notes(self):
+        """0.4.1 (L2): the page checklists mark items Pro checks automatically; a manual review passes that on."""
+        checklists = sorted((SKILLS / "website-verify" / "references" / "page-checklists").glob("*.md"))
+        self.assertTrue(any("checks this automatically" in p.read_text(encoding="utf-8") for p in checklists))
+        text = (SKILLS / "website-verify" / "SKILL.md").read_text(encoding="utf-8")
+        line = next(l for l in text.splitlines() if "page-checklists/" in l)
+        self.assertIn("checks this automatically", line)
+        # the isolated live check summed the notes up in one wrong line and used "partly met"
+        self.assertIn("on that item's row only", line)
+        self.assertIn("never sum up", line)
+        self.assertIn('never "partly"', line)
+        for p in checklists:
+            text = p.read_text(encoding="utf-8")
+            self.assertEqual(text.count("- Sitewright (Pro, in fkweb-dev-pro) checks this automatically."),
+                             len([l for l in text.splitlines() if l.startswith("## ")
+                                  and l.endswith(" · Pro checks this automatically")]), p.name)
+
 
 if __name__ == "__main__":
     unittest.main()

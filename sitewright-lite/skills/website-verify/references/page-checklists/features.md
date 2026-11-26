@@ -8,7 +8,7 @@ How to present what a product or service does so readers understand the value an
 
 Use when: A features, services overview or "what you get" page or section.
 
-Updated 2026-11-25. 12 items, checked by hand. Record each as passed, failed, skipped (with the reason) or unavailable (with what would settle it). No score.
+Updated 2026-11-25. 12 items, checked by hand. Record each item on its own row as passed, failed, skipped (with the reason) or unavailable (with what would settle it), and no other word. No score. An item whose heading ends "Pro checks this automatically" keeps that note on its own row; the other items do not get it.
 
 ## features-01 · warning
 
@@ -26,7 +26,7 @@ Features are in order of importance to the audience.
 - Pass: The most important features come first.
 - Sources: [Google Search Central: creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 
-## features-03 · critical
+## features-03 · critical · Pro checks this automatically
 
 Every claim is specific and supported.
 
@@ -51,7 +51,7 @@ The product or service is shown with real screenshots, photos or demos, not gene
 - Pass: Images show the actual product or work, with captions where needed.
 - Sources: [Nielsen Norman Group: 10 usability heuristics for user interface design](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
-## features-06 · warning
+## features-06 · warning · Pro checks this automatically
 
 Meaningful images and icons have text alternatives. Decorative ones are hidden from screen readers.
 
@@ -60,7 +60,7 @@ Meaningful images and icons have text alternatives. Decorative ones are hidden f
 - Sources: [WCAG 2.2, 1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## features-07 · warning
+## features-07 · warning · Pro checks this automatically
 
 The layout avoids the generic AI look: not a grid of identical icon cards with vague three-word headings.
 
@@ -85,7 +85,7 @@ A comparison table, if present, is real table markup with headers, and its facts
 - Pass: A table element with th headers. Competitor facts are sourced and carry a check date, or the comparison is removed.
 - Sources: [WCAG 2.2, 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships); [ASA CAP Code, section 3: misleading advertising (substantiation, testimonials, comparisons)](https://www.asa.org.uk/type/non_broadcast/code_section/03.html)
 
-## features-10 · info
+## features-10 · info · Pro checks this automatically
 
 One primary action follows the features and is repeated where the reader is ready.
 
@@ -94,7 +94,7 @@ One primary action follows the features and is repeated where the reader is read
 - Sources: fkweb-dev house rule: one primary action per page, repeated where the reader is ready
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## features-11 · warning
+## features-11 · warning · Pro checks this automatically
 
 Feature grids reflow at 320 px without sideways scrolling.
 
@@ -103,7 +103,7 @@ Feature grids reflow at 320 px without sideways scrolling.
 - Sources: [WCAG 2.2, 1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## features-12 · info
+## features-12 · info · Pro checks this automatically
 
 Separate feature pages, if any, each have unique, useful content, not near-copies with a swapped keyword.
 

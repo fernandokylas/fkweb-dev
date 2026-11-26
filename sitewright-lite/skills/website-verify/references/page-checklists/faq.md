@@ -8,7 +8,7 @@ How to make a frequently asked questions page that answers real questions and th
 
 Use when: A page or section that lists questions with answers.
 
-Updated 2026-11-25. 13 items, checked by hand. Record each as passed, failed, skipped (with the reason) or unavailable (with what would settle it). No score.
+Updated 2026-11-25. 13 items, checked by hand. Record each item on its own row as passed, failed, skipped (with the reason) or unavailable (with what would settle it), and no other word. No score. An item whose heading ends "Pro checks this automatically" keeps that note on its own row; the other items do not get it.
 
 ## faq-01 · warning
 
@@ -34,7 +34,7 @@ Each answer opens with the direct answer in its first sentence.
 - Pass: The first sentence answers the question (yes, no, a number, a step); the detail follows.
 - Sources: [GOV.UK: content design, planning, writing and managing content](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)
 
-## faq-04 · info
+## faq-04 · info · Pro checks this automatically
 
 Answers are short and link to the full page for detail instead of copying it.
 
@@ -59,7 +59,7 @@ More than about ten questions are grouped under topic headings with jump links.
 - Pass: Ten or fewer questions, or topic groups with links to each group.
 - Sources: [Nielsen Norman Group: accordions on desktop](https://www.nngroup.com/articles/accordions-on-desktop/)
 
-## faq-07 · warning
+## faq-07 · warning · Pro checks this automatically
 
 Collapsible answers work by keyboard and announce whether they are open.
 
@@ -68,7 +68,7 @@ Collapsible answers work by keyboard and announce whether they are open.
 - Sources: [WCAG 2.2, 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value); [WCAG 2.2, 2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard); [GOV.UK Design System: details](https://design-system.service.gov.uk/components/details/); [GOV.UK Design System: accordion](https://design-system.service.gov.uk/components/accordion/)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## faq-08 · warning
+## faq-08 · warning · Pro checks this automatically
 
 All answers are in the page's HTML when it loads, not fetched after a click.
 
@@ -77,7 +77,7 @@ All answers are in the page's HTML when it loads, not fetched after a click.
 - Sources: [Google Search Central: JavaScript SEO basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## faq-09 · info
+## faq-09 · info · Pro checks this automatically
 
 The browser's find in page reaches text inside collapsed answers.
 
@@ -86,7 +86,7 @@ The browser's find in page reaches text inside collapsed answers.
 - Sources: [MDN: the hidden attribute (including until-found)](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## faq-10 · info
+## faq-10 · info · Pro checks this automatically
 
 FAQPage structured data, where used, matches the visible questions and answers word for word.
 

@@ -4,7 +4,9 @@
 Run from the dev root: python3 -m unittest discover tests/records
 Every case works in a scratch project whose path contains spaces.
 """
+import datetime
 import json
+import os
 import unittest
 
 from test_requirements import PAGE, RECORDS, Project, run
@@ -155,6 +157,34 @@ class RollingArchiveTest(Base):
         code, out, _ = self.record("a11y.landmarks", "site/index.html", first)
         self.assertNotEqual(code, 0)
         self.assertTrue(any("evidence reused" in d and "archived" in d for d in out["diagnostics"]), out)
+
+    def archived_then_changed(self, offset):
+        """Archive a record that cites first.txt, change the target, and set first.txt's mtime `offset`
+        seconds from the archived record's timestamp. Returns the evidence path."""
+        first = self.note("first.txt")
+        self.assertEqual(self.record("a11y.landmarks", "site/index.html", first)[0], 0)
+        self.assertEqual(self.record("a11y.landmarks", "site/index.html", self.note("second.txt"))[0], 0)
+        stamp = datetime.datetime.fromisoformat(self.archived()[0]["timestamp"].replace("Z", "+00:00")).timestamp()
+        (self.site / "index.html").write_text(PAGE.format(t="Home", body="Changed."))
+        os.utime(self.root / first, (int(stamp) + offset, int(stamp) + offset))
+        return first
+
+    def test_archived_evidence_rewritten_later_is_a_new_run(self):
+        """0.4.1 (with T21): identical bytes written again after the archived record count as a new run."""
+        first = self.archived_then_changed(+5)
+        code, out, _ = self.record("a11y.landmarks", "site/index.html", first)
+        self.assertEqual(code, 0, out)
+        self.assertIn("evidence_mtime", self.data()["records"][-1])
+
+    def test_archived_evidence_untouched_since_is_still_refused(self):
+        first = self.archived_then_changed(-10)
+        code, out, _ = self.record("a11y.landmarks", "site/index.html", first)
+        self.assertNotEqual(code, 0)
+        self.assertTrue(any("byte-identical" in d and "archived" in d for d in out["diagnostics"]), out)
+
+    def test_archived_evidence_written_in_the_same_second_is_still_refused(self):
+        first = self.archived_then_changed(0)
+        self.assertNotEqual(self.record("a11y.landmarks", "site/index.html", first)[0], 0)
 
     def test_a_record_sharing_evidence_with_the_current_one_is_kept_active(self):
         """The reuse guard reads both records, so the earlier one may not leave the active file."""

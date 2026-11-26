@@ -77,7 +77,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import sw_records  # noqa: E402  (same directory; shared report, record parsing and evidence logic)
 
 TOOL = "sw_design_check"
-TOOL_VERSION = "4"
+TOOL_VERSION = "5"
 STYLE_CHECKS = ("style.contrast", "style.leading", "style.tracking", "style.justify", "style.padding")
 LAYOUT_CHECKS = ("layout.grid-items", "layout.spacing-reset")
 BUILD_CHECKS = ("design.raw-literals",) + STYLE_CHECKS + LAYOUT_CHECKS
@@ -643,29 +643,80 @@ class Build:
 
 # ---------- the design record's tokens ----------
 
-def parse_tokens(spec):
-    """{name: value or None} from a semantic_tokens field; `--space-1..6` expands to a range."""
+LABEL_AFTER_DASH = re.compile(r"\s-\s+[A-Za-z][\w ()/.,'-]*:(?:\s|$)")
+
+
+def token_value_text(text):
+    """The value at the start of `text`: it ends at the closing backtick, a `;` or a ` - ` bullet boundary
+    outside parentheses, whichever comes first (sw_records flattens nested bullets with ` - `)."""
+    depth, i = 0, 0
+    if text.startswith("`"):
+        i = 1
+    out = []
+    while i < len(text):
+        ch = text[i]
+        if ch == "`":
+            break
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        elif depth == 0 and ch == ";":
+            break
+        elif depth == 0 and text.startswith(" - ", i):
+            break
+        out.append(ch)
+        i += 1
+    value = "".join(out)
+    value = re.sub(r"[\s,;*`-]+$", "", value)
+    value = re.sub(r"\s+\([^()]*\)$", "", value).strip().strip("`")
+    return value or None
+
+
+def token_value(rest, ranged):
+    """The recorded value after a token name, or None: `: value`, `= value`, or a value on the first nested
+    bullet (` - value`, `: - value`) when that bullet is a CSS value and not a label."""
+    if ranged:
+        return None
+    stripped = rest.lstrip(" `")
+    if stripped[:1] in (":", "="):
+        after = stripped[1:].lstrip()
+        if after.startswith("- "):
+            after = after[2:].lstrip()
+        return token_value_text(after)
+    if stripped.startswith("- "):
+        after = stripped[2:].lstrip()
+        if not LABEL_AFTER_DASH.match(" - " + after) and looks_like_css(token_value_text(after) or ""):
+            return token_value_text(after)
+    return None
+
+
+def parse_tokens(spec, duplicates=None):
+    """{name: value or None} from a semantic_tokens field; `--space-1..6` expands to a range.
+
+    The FIRST value of a repeated name is kept (a second value for the same name is a second ground, not a
+    replacement). When `duplicates` is a list, each repeat with a different value is appended to it as
+    (name, kept value, ignored value)."""
     tokens = {}
     matches = list(TOKEN_NAME.finditer(spec))
     for n, m in enumerate(matches):
         name, upto = m.group(1).rstrip("-"), m.group(2)
-        value = None
         rest = spec[m.end():matches[n + 1].start() if n + 1 < len(matches) else len(spec)]
-        stripped = rest.lstrip(" `")
-        if not upto and stripped[:1] in (":", "="):
-            value = stripped[1:].strip().strip("`")
-            value = re.sub(r"[\s,;*`-]+$", "", value)
-            value = re.sub(r"\s+\([^()]*\)$", "", value).strip().strip("`")
-            value = value or None
+        value = token_value(rest, bool(upto))
         if upto:
             base = re.match(r"(.*?)(\d+)$", name)
             if base and int(upto) >= int(base.group(2)) and int(upto) - int(base.group(2)) < 50:
                 for i in range(int(base.group(2)), int(upto) + 1):
                     tokens.setdefault(f"--{base.group(1)}{i}", None)
                 continue
-        tokens.setdefault("--" + name, value)
-        if value is not None:
-            tokens["--" + name] = value
+        key = "--" + name
+        kept = tokens.setdefault(key, value)
+        if value is None:
+            continue
+        if kept is None:
+            tokens[key] = value
+        elif kept != value and duplicates is not None:
+            duplicates.append((key, kept, value))
     return tokens
 
 
@@ -768,7 +819,8 @@ class Checker:
             self.add(cid, record_target, line, "defect", "design record has no semantic_tokens",
                      "record the semantic tokens with their values", also=(".",))
             return
-        tokens = parse_tokens(spec)
+        repeats = []
+        tokens = parse_tokens(spec, repeats)
         if not tokens:
             reason = "semantic_tokens names no custom properties (--name); nothing to compare"
             self.ran(cid, ".", "skipped", reason)
@@ -777,6 +829,16 @@ class Checker:
             return
         self.ran(cid, ".")
         self.ran(cid, record_target)
+        if repeats:
+            listed = "; ".join(f"{n} (kept {k!r}, ignored {i!r})" for n, k, i in repeats[:MAX_LISTED])
+            more = f" and {len(repeats) - MAX_LISTED} more" if len(repeats) > MAX_LISTED else ""
+            self.add(cid, record_target, line, "warning",
+                     f"{len(repeats)} token name{'s' if len(repeats) != 1 else ''} in semantic_tokens given more "
+                     f"than once with a different value: {listed}{more}; only the first value is compared",
+                     "record the primary ground only under the build's token names, and put a second ground "
+                     "(for example the inverted one) in its own field such as `ground_inverted_tokens`, "
+                     "written without token syntax (--name)", kind="convention",
+                     extra={"tokens": [n for n, _, _ in repeats]})
         for name, recorded in tokens.items():
             built_name = name if name in build.declared else (theme_alias(name, build.theme_vars)
                                                                if build.kind == "theme" else None)

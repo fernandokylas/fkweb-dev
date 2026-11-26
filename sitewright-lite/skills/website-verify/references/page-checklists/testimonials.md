@@ -8,9 +8,9 @@ How to show customer quotes and ratings honestly and accessibly.
 
 Use when: Any page or section that shows testimonials, quotes, ratings or review widgets.
 
-Updated 2026-11-25. 12 items, checked by hand. Record each as passed, failed, skipped (with the reason) or unavailable (with what would settle it). No score.
+Updated 2026-11-25. 12 items, checked by hand. Record each item on its own row as passed, failed, skipped (with the reason) or unavailable (with what would settle it), and no other word. No score. An item whose heading ends "Pro checks this automatically" keeps that note on its own row; the other items do not get it.
 
-## testimonials-01 · critical
+## testimonials-01 · critical · Pro checks this automatically
 
 Every testimonial comes from a real customer who agreed to it being published, and the record is kept.
 
@@ -59,7 +59,7 @@ Reviews from third-party platforms link to their source so they can be checked.
 - Pass: Each imported review or rating links to the platform page.
 - Sources: [FTC: Endorsement Guides, what people are asking](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking)
 
-## testimonials-07 · warning
+## testimonials-07 · warning · Pro checks this automatically
 
 There is no review or rating structured data for the business's own reviews of itself, and no marked-up rating that is not visible.
 
@@ -84,7 +84,7 @@ Testimonials sit next to the decision they support, such as pricing or sign-up, 
 - Pass: At least one relevant quote sits near the main action.
 - Sources: fkweb-dev house rule: one primary action per page, repeated where the reader is ready
 
-## testimonials-10 · warning
+## testimonials-10 · warning · Pro checks this automatically
 
 A rotating carousel can be paused and does not move on its own faster than people read. Every quote is reachable by keyboard.
 

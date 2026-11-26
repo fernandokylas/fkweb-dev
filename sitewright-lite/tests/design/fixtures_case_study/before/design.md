@@ -1,0 +1,65 @@
+# Design
+
+Fictional sample for testing. Direction chosen after a creative-director consult (advisor, 2026-11-25): the sign system shapes the frame and the figures; the reading column stays a plain long-form feature.
+
+- authority_source: toolkit default (nothing supplied; create job). Editorial family structure applied; no brand guide.
+- design_family: editorial
+- selected_direction: A long-form magazine feature set on a cool enamel-white ground, framed by the sign system the fictional studio Ondrel & Pask designed for the fictional transit network Kestrow Lines. Intake axes: kind `mixed` (rail reading sections plus one card band and full-width figure bands); ground `mixed` (paper page with a single obsidian sign panel holding the title in the first viewport); motion `tactile` (hover on outcome cards and links only, no entrances); network `zero` (system font stacks, no CDN); task `new`. The sign panel's module is the page's unit: spacing, rule weights, the diagram grid and card proportions are multiples of it. The reading column is left alone: a serif reading face at about 62 characters, real contrast, no costume. Two faces: a grotesk system stack for display, labels and figures (the language of the signs), a serif system stack for running text (the language of the feature). Alternatives considered: a classic magazine feature with no subject device (rejected, it fails the swap test: any studio could occupy it) and a blueprint/drawing-sheet treatment (rejected as a costume).
+- subject_inventory:
+  - the Kestrow Lines network: lines, platforms and interchanges [supplied] (fictional client, fixture)
+  - the station sign panel and its fixed module (panel height to width) [assumption]
+  - line colours as the network's identifiers [assumption]
+  - legacy sign families that disagree with each other (the problem) [assumption]
+  - station name tablets and pictograms [assumption]
+  - departure boards and the minute as the unit of a passenger's patience [assumption]
+  - walking routes between platforms at an interchange [assumption]
+  - the studio's sign audit: counting and photographing every sign on the network [assumption]
+  - passengers changing lines under time pressure [assumption]
+  - the project's five phases over a fixed number of weeks [supplied] (fixture timeline)
+  Thin brief: every item is fictional fixture material or an assumption; nothing is a real fact.
+- idea: The sign panel's module becomes the page's unit: spacing steps, rule weights, the diagram grid and the outcome card proportions are all multiples of one panel module (0.5rem), the title sits in the one dark sign panel, and the process timeline is drawn as a transit line whose stations are the project's phases spaced by weeks. Decisions that follow: (1) layout spacing steps are module multiples; (2) one dark title panel, not a hero image; (3) the process figure is a line diagram with stations spaced proportionally to weeks and an interchange where two phases overlap; (4) the grotesk display face and tabular figures borrow the signs' voice while the serif carries reading; (5) one accent, the network's line colour, used for the line in the diagrams and for links; (6) outcome cards take the panel's 3:2 proportion with a line-colour bar as the moving element.
+- swap_test: No competitor is named in the brief. Swap: put a different studio's branding case study for a bank into this page. The panel module, the transit-line timeline and the line-colour accent have nothing to attach to, so the page would not work unchanged: the idea belongs to this project. Outcome: kept.
+- refused_default: Excluded: (1) the stock agency case study: full-bleed hero photo, a big-number stat row, three identical cards and a client logo strip; (2) its predictable opposite: a dark brutalist portfolio page with oversized type and no reading structure; (3) taking the subject literally: the whole page dressed as a station sign. In their place: a paper reading feature with one sign panel, three purpose-built diagrams in three different forms, and figure cards in a single breakout band.
+- first_viewport: Phone (375px): masthead with the studio wordmark and a "Contents" anchor row that scrolls horizontally; below it the dark sign panel filling most of the screen: kicker "Case study · Wayfinding", the h1, and the line "Fictional sample for testing" inside the panel; the standfirst begins under the panel at the fold. Desktop (1280px): masthead with wordmark left and the four section anchors right; the sign panel spans the content grid: h1 across eight columns, a metadata rail on the right (client, sector, duration, discipline, all fictional) and the fictional-sample line in the panel's footer band; the standfirst and the first lines of "The problem" are visible below. The primary action (reading) is in working form on the first screen: the standfirst starts the text and the anchors jump to each section.
+- surface_mode_notes: both pages `read`; the world shapes the frame (masthead, title panel, section openers, figures, card band) and leaves the reading column alone.
+- colour_sources: Accent `#8f2614` is the fictional network's Line 2 colour, an enamel-signal vermilion darkened until it reaches 7.6:1 as text on the ground; the obsidian panel `#111a24` is the blue-black of a station sign panel; the ground `#f2f3f1` is cool enamel white, not cream.
+- named_tells: style.slop-eyebrow: the section code kicker (P1, A2, T3, O4, C5) is the sign system's platform code, part of the idea, and appears once per section opener only
+- label_tracking_max: 0.12em
+- semantic_tokens:
+  - paper (`:root`): `--bg-main: #f2f3f1`; `--surface-card: #fafaf8`; `--text-main: #16191d` (15.8:1); `--text-muted: #4a5058` (7.3:1; 7.8:1 on card); `--accent-text: #8f2614` (7.7:1; 8.2:1 on card); `--accent-solid: #8f2614`; `--accent-on-solid: #ffffff` (8.6:1); `--rule: #c9ced3` (decorative hairline only); `--rule-strong: #7c838b` (3.4:1, for chart axes and card edges that carry meaning); `--focus: #8f2614`
+  - obsidian (`.theme-inverted`, the title panel and the 404 panel): `--bg-main: #111a24`; `--surface-card: #18222e`; `--text-main: #e6e8ea` (14.3:1); `--text-muted: #a9b1ba` (8.1:1); `--accent-text: #f08a6c` (7.2:1); `--accent-solid: #f08a6c`; `--accent-on-solid: #111a24`; `--rule: #2c3846`; `--focus: #f08a6c`
+  - module and spacing: `--u: 0.5rem` (the panel module); steps `--s1: calc(var(--u) * 1)`, `--s2: *2`, `--s3: *3`, `--s4: *4`, `--s6: *6`, `--s8: *8`, `--s12: *12`, `--s16: *16`; `--pad-page: clamp(1rem, 4vw, 4rem)`; `--gap-grid: clamp(1.5rem, 4vw, 3.5rem)`; `--gap-section: clamp(4rem, 9vw, 8rem)`
+  - rules: `--rule-hair: 1px`; `--rule-bar: calc(var(--u) * 0.5)` (4px, the panel's top band)
+  - radius: `--radius: 0` (enamel panels have square corners)
+  - motion: `--transition-smooth: 180ms cubic-bezier(0.2, 0, 0, 1)`; `--transition-out: 120ms cubic-bezier(0.4, 0, 1, 1)`
+  - depth matrix: `--z-subground: -1`; `--z-base: 0`; `--z-raised: 10`; `--z-sticky: 100`; `--z-overlay: 1000`; `--z-critical: 10000`
+- type_rules:
+  - `--font-display`: "Helvetica Neue", Helvetica, Arial, "Nimbus Sans", sans-serif; system fonts, no download, licences are the operating system's; weight 700 for h1/h2, 600 for labels; tracking -0.02em at display sizes; tabular-nums for all figures
+  - `--font-body`: "Iowan Old Style", "Charter", "Bitstream Charter", Georgia, Cambria, serif; system fonts; weight 400, 600 for strong; line-height 1.6
+  - two families only; no monospace
+  - sizes: `--fs-body: clamp(1.062rem, calc(1.027rem + 0.179vw), 1.188rem)`; `--fs-display: clamp(2.25rem, calc(1.536rem + 3.571vw), 4.75rem)`; `--fs-h2: clamp(1.75rem, 4vw, 3rem)`; `--fs-h3: clamp(1.25rem, 2.5vw, 1.75rem)`; `--fs-standfirst: clamp(1.25rem, 2vw, 1.5rem)`; `--fs-meta: 0.75rem`
+  - metadata voice: uppercase grotesk at 0.75rem, weight 600, tracking 0.12em, colour `--text-muted`; never on lowercase
+  - text floor: 0.75rem (12px) for every rendered text, HTML and SVG alike; text at 14px or under uses weight 500+; uppercase at 12 to 13px uses 600
+  - SVG text: diagram labels must render at 12px or more at every width where that SVG is shown. Labels are sized in viewBox units as 12px divided by the SVG's smallest render scale, rounded up. Each figure has a narrow composition (shown below 720px, drawn for a 288px-wide render) and a wide composition (720px and up, drawn for its narrowest render width), swapped by CSS, so no viewBox scaling pushes a label below the floor
+  - measure: 62ch reading column; standfirst 50ch; rag: `text-wrap: pretty` on paragraphs, `text-wrap: balance` on headings, `white-space: nowrap` on dates, durations and figure-with-unit pairs; no justified text
+- layout_rules:
+  - grid: 12 columns from 720px with `--gap-grid` gutters; one column below 720px with a 16px minimum page gutter
+  - rail: reading sections use the editorial rail from 720px: a left label column (section code kicker and h2 note) and the 62ch copy column; below 720px the rail stacks above the copy
+  - breakouts: figures and the outcomes band span the full 12 columns; nothing card-like sits inside the 62ch column
+  - rhythm: `--gap-section` between sections; `--s3` paragraph spacing; headings take `--s6` above and `--s3` below
+  - density: airy, editorial; contrast of scale: dramatic in the title panel only, gentle elsewhere; ornament: rules and the line diagram only; motion: still
+  - breakpoints: 720px (rail and figure composition switch), 1024px (outcome cards to four across, metadata rail beside the h1); everything else fluid
+  - per page type:
+    - `/`: statement panel (title) / rail text (problem) / small-multiples figure band / rail text with numbered argument (approach) / full-width line diagram band (process) / pull-quote set across the grid / card band plus paired chart (outcomes) / rail text (closing note) / footer. Focal: the transit-line process diagram. Reuses masthead, rail, figure, card, footer
+    - `/404`: statement panel (a small obsidian sign panel reading "Page not found" with a plain sentence) / short link list back to `/` and `/#outcomes`. Focal: the sign panel. Reuses masthead, footer
+  - figures, three forms: problem = small multiples of mismatched legacy sign panels (sizes, colours, arrows that disagree); process = a transit line, stations spaced in proportion to weeks, an interchange where two phases overlap, vertical on narrow screens; outcomes = a paired before/after chart of the four sample figures (dumbbell form), with a data table equivalent
+- component_states:
+  - masthead links: default underline-offset hairline; hover underline thickens to 2px (colour only, no movement); focus-visible 2px `--focus` outline offset 3px; active current colour; disabled/loading/error n/a
+  - skip link: hidden until focus; focus-visible shows at top left on `--accent-solid` with `--accent-on-solid` text
+  - inline links: `--accent-text`, underline; hover thicker underline; focus-visible outline as above
+  - outcome card: the card box never moves, scales or changes size on hover. One inner element carries the motion: the line-colour meter bar inside the card (`.card__meter`) grows along its track with `transform: scaleX()` over `--transition-smooth`, and the label colour shifts to `--accent-text`. Hover rules sit inside `@media (hover: hover) and (pointer: fine)`. Nothing is revealed only on hover: the figure, its label and the "Sample figure" tag are always visible. Under reduced motion the meter does not animate (static at full value); colour change only. Cards are not links, so no focus state; focus-visible n/a, active n/a, disabled/loading/error n/a
+  - figure (SVG): static; each has `role="img"` with an accessible name, a figcaption, and a text or table equivalent; no hover
+  - pull-quote: static; no states
+  - data table: static; header row in metadata voice; zebra none; rows separated by `1px solid var(--rule)`
+- responsive_intent: Fluid from 320px to 1440px+. Below 720px one column, the rail stacks, figures switch to their narrow compositions and the outcome cards stack one per row (two per row from 520px). Reflow at 320px with no horizontal scroll; text resizes to 200% without loss. The fictional-sample line is visible in the first viewport at every width.
+- motion_intent: Tactile only. Motion helps once: the outcome card meter grows on hover to point at the figure (180ms, decelerating). Links change underline weight, not position. No entrance animations, no scroll effects. Content never depends on motion. `prefers-reduced-motion: reduce` disables all transitions and transforms (the safety net ships even so).

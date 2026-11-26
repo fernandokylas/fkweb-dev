@@ -12,7 +12,7 @@ The full edition of Sitewright adds content and copywriting, SEO and AI-search v
 
 Lite gets bug and security fixes, plus small free additions that show what the full edition automates.
 
-Version 0.4.0. See `CHANGELOG.md` for what changed and its known limitations.
+Version 0.4.1. See `CHANGELOG.md` for what changed and its known limitations.
 
 ## Quick start
 

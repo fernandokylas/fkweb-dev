@@ -75,6 +75,17 @@ class HandoverTest(unittest.TestCase):
         self.assertEqual(names, ["`next_action` names site/about.html, which does not exist in the project"])
         code, out, _ = self.check(next_action="Create site/contact.html from the page contract.")
         self.assertFalse(found(out, "which does not exist"))
+        # 0.4.1 (T20): every path after a creating verb is exempt, dots in file names included
+        code, out, _ = self.check(next_action="Build site/404.html and site/about.html.")
+        self.assertFalse(found(out, "which does not exist"), out["findings"])
+        code, out, _ = self.check(next_action="Add site/404.html, site/about.html and site/contact.html next.")
+        self.assertFalse(found(out, "which does not exist"), out["findings"])
+        code, out, _ = self.check(next_action="Build site/index.html, site/404.html and site/styles.css from "
+                                              "docs/website records (copy and hover from the design record).")
+        self.assertFalse(found(out, "which does not exist"), out["findings"])
+        # a sentence boundary still ends the exemption
+        code, out, _ = self.check(next_action="Build the page. Then fix site/404.html and site/about.html.")
+        self.assertEqual(len(found(out, "which does not exist")), 2)
         self.write_handover("{}", name="docs/website/verification.json")    # the plugin path is never checked
         code, out, _ = self.check(next_action='Run python3 "<plugin>/scripts/sw_records.py" gate '
                                               "docs/website/verification.json --root . --mode mockup")

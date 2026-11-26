@@ -8,7 +8,7 @@ What the footer on every page should hold and how it should behave.
 
 Use when: The site-wide footer, checked once on a sample of templates.
 
-Updated 2026-11-25. 14 items, checked by hand. Record each as passed, failed, skipped (with the reason) or unavailable (with what would settle it). No score.
+Updated 2026-11-25. 14 items, checked by hand. Record each item on its own row as passed, failed, skipped (with the reason) or unavailable (with what would settle it), and no other word. No score. An item whose heading ends "Pro checks this automatically" keeps that note on its own row; the other items do not get it.
 
 ## footer-01 · warning
 
@@ -34,7 +34,7 @@ A link to the privacy notice is on every page.
 - Pass: A visible privacy notice link on every sampled page.
 - Sources: [Regulation (EU) 2016/679 (GDPR), Articles 7 and 13](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 
-## footer-04 · warning
+## footer-04 · warning · Pro checks this automatically
 
 Where non-essential cookies or trackers are used, a link lets people change or withdraw consent at any time.
 
@@ -43,7 +43,7 @@ Where non-essential cookies or trackers are used, a link lets people change or w
 - Sources: [Regulation (EU) 2016/679 (GDPR), Articles 7 and 13](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-05 · warning
+## footer-05 · warning · Pro checks this automatically
 
 The business name, address and phone in the footer match the contact page and the structured data exactly.
 
@@ -52,7 +52,7 @@ The business name, address and phone in the footer match the contact page and th
 - Sources: [Google Search Central: local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-06 · warning
+## footer-06 · warning · Pro checks this automatically
 
 Footer links are real links with clear text.
 
@@ -61,7 +61,7 @@ Footer links are real links with clear text.
 - Sources: [Google Search Central: make your links crawlable](https://developers.google.com/search/docs/crawling-indexing/links-crawlable); [WCAG 2.2, 2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-07 · info
+## footer-07 · info · Pro checks this automatically
 
 The footer is marked up as a footer landmark, and its groups of links have headings or labels.
 
@@ -70,7 +70,7 @@ The footer is marked up as a footer landmark, and its groups of links have headi
 - Sources: [WCAG 2.2, 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-08 · warning
+## footer-08 · warning · Pro checks this automatically
 
 Footer text and links meet minimum contrast.
 
@@ -79,7 +79,7 @@ Footer text and links meet minimum contrast.
 - Sources: [WCAG 2.2, 1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-09 · warning
+## footer-09 · warning · Pro checks this automatically
 
 Footer links and icons are big enough to tap or have enough space around them.
 
@@ -88,7 +88,7 @@ Footer links and icons are big enough to tap or have enough space around them.
 - Sources: [WCAG 2.2, 2.5.8 Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-10 · info
+## footer-10 · info · Pro checks this automatically
 
 The footer is the same on every page.
 
@@ -97,7 +97,7 @@ The footer is the same on every page.
 - Sources: [WCAG 2.2, 3.2.3 Consistent Navigation](https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation); [WCAG 2.2, 3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-11 · info
+## footer-11 · info · Pro checks this automatically
 
 There are no template leftovers or stale details.
 
@@ -106,7 +106,7 @@ There are no template leftovers or stale details.
 - Sources: [Nielsen Norman Group: footers 101](https://www.nngroup.com/articles/footers/)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-12 · info
+## footer-12 · info · Pro checks this automatically
 
 Social and icon-only links have accessible names and point to active official profiles.
 
@@ -115,7 +115,7 @@ Social and icon-only links have accessible names and point to active official pr
 - Sources: [WCAG 2.2, 1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content); [WCAG 2.2, 2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-13 · warning
+## footer-13 · warning · Pro checks this automatically
 
 The footer has no blocks of keyword links, such as lists of towns or near-duplicate service pages.
 
@@ -124,7 +124,7 @@ The footer has no blocks of keyword links, such as lists of towns or near-duplic
 - Sources: [Google Search Central: spam policies](https://developers.google.com/search/docs/essentials/spam-policies)
 - Sitewright (Pro, in fkweb-dev-pro) checks this automatically.
 
-## footer-14 · info
+## footer-14 · info · Pro checks this automatically
 
 A newsletter sign-up, if present, has a visible label and says what people will get and how often.
 

@@ -4,6 +4,7 @@ gate and status report coverage by method.
 Run from the dev root: python3 -m unittest discover tests/records
 """
 import json
+import os
 import unittest
 
 from test_batch_and_archive import Base
@@ -28,6 +29,39 @@ class UnchangedRerunTest(Base):
         self.assertEqual(out["record"]["evidence_path"], "docs/website/evidence/r1.txt")
         self.assertEqual([r["evidence_path"] for r in self.records()], ["docs/website/evidence/r1.txt"])
         self.assertFalse(self.archive.exists())
+
+    def test_a_fresh_evidence_file_after_a_reused_pass_is_written_not_unchanged(self):
+        """0.4.1 (T21): the pass was stale as "evidence reused", and the rerun with a new evidence file was
+        swallowed as unchanged, so the gate stayed stale in a loop."""
+        self.assertEqual(self.record("r1.txt")[0], 0)
+        (self.site / "index.html").write_text(PAGE.format(t="Home", body="Changed."))
+        os.utime(self.evidence / "r1.txt", (1, 1))                # not rewritten since: the same old file
+        code, out, _ = run(RECORDS, "record", self.vpath, "--root", self.root, "--check-id", "a11y.landmarks",
+                           "--target", "site/index.html", "--result", "passed", "--method", "manual",
+                           "--tool-and-version", "reviewer 1", "--evidence-path", "docs/website/evidence/r1.txt",
+                           "--finding", "landmarks present", "--require")
+        self.assertEqual(code, 0, out)                            # copied forward: recorded, but stale below
+        code, gate, _ = self.gate()
+        self.assertEqual(gate["result"], "stale")
+        self.assertIn("evidence reused", gate["checks"][0]["reason"])
+        self.assertIn("--append-unchanged", gate["checks"][0]["reason"])
+        code, out, _ = self.record("r2.txt", text="the check ran again")     # a fresh file from a real rerun
+        self.assertEqual((code, out["unchanged"]), (0, False), out)
+        self.assertEqual(self.records()[-1]["evidence_path"], "docs/website/evidence/r2.txt")
+        self.assertEqual(self.gate()[1]["result"], "passed")
+
+    def test_the_archived_reuse_refusal_names_append_unchanged(self):
+        self.record("r1.txt")
+        self.record("r2.txt", finding="one landmark missing")      # archives the first record
+        (self.site / "index.html").write_text(PAGE.format(t="Home", body="Changed."))
+        old = self.evidence / "r1.txt"
+        os.utime(old, (1, 1))                                     # not rewritten since: still the old file
+        code, out, _ = run(RECORDS, "record", self.vpath, "--root", self.root, "--check-id", "a11y.landmarks",
+                           "--target", "site/index.html", "--result", "passed", "--method", "manual",
+                           "--tool-and-version", "reviewer 1", "--evidence-path", "docs/website/evidence/r1.txt",
+                           "--finding", "landmarks present", "--require")
+        self.assertNotEqual(code, 0)
+        self.assertTrue(any("evidence reused" in d and "--append-unchanged" in d for d in out["diagnostics"]), out)
 
     def test_a_different_finding_result_or_target_state_appends(self):
         self.record("r1.txt")

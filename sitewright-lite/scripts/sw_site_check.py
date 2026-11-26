@@ -44,7 +44,8 @@ checks below; results are reported per (check_id, target) so they can be recorde
                           simulated (disclosed) or declared form passes for the mock-up only.
   meta.indexing           robots meta (robots/googlebot noindex or none) against the page contract's
                           metadata_and_indexing_intent, read from --records DIR (default: the folder
-                          of --record; its Markdown files are recorded as inputs). A mismatch either
+                          of --record; only the Markdown files holding `### Page:` contracts are
+                          recorded as inputs, so a handover edit stays fresh). A mismatch either
                           way is a defect with --release and a warning without it; a noindex at release
                           with no stated intent is a warning (404 pages exempt).
   site.404                a custom 404 page exists
@@ -83,7 +84,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import sw_records  # noqa: E402  (same directory; shared report, fingerprint and record logic)
 
 TOOL = "sw_site_check"
-TOOL_VERSION = "6"
+TOOL_VERSION = "7"
 PAGE_CHECKS = ("a11y.landmarks", "meta.basics", "meta.indexing", "nav.internal-links", "nav.active", "form.labels",
                "form.states", "media.images", "motion.reduced", "content.placeholders", "content.tells",
                "content.fixture-markers", "content.mockup-notes")

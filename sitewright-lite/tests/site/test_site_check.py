@@ -442,6 +442,27 @@ class IndexingTest(unittest.TestCase):
         gcode, gate, _ = run("gate", verification, "--root", self.project, "--mode", "mockup", script=RECORDS)
         self.assertEqual((gcode, gate["result"]), (1, "stale"), gate)
 
+    def test_only_the_page_contract_files_are_inputs(self):
+        """0.4.1 (T14): editing HANDOVER.md or another record leaves meta.indexing fresh; the site map still stales it."""
+        (self.records / "HANDOVER.md").write_text("# Handover\n\nNext: build the menu page.\n")
+        (self.records / "brief.md").write_text("# Brief\n\n- audience: regulars\n")
+        verification = self.records / "verification.json"
+        code, report, err = run(self.project / "site", "--checks", "meta.indexing", "--record", verification,
+                                "--root", self.project, "--evidence-out", self.records / "evidence" / "idx.json",
+                                "--require")
+        self.assertEqual(code, 0, (err, report))
+        text = verification.read_text()
+        self.assertIn("website.md", text)
+        self.assertNotIn("HANDOVER.md", text)
+        self.assertNotIn("brief.md", text)
+        (self.records / "HANDOVER.md").write_text("# Handover\n\nNext: build the order page.\n")
+        gcode, gate, _ = run("gate", verification, "--root", self.project, "--mode", "mockup", script=RECORDS)
+        self.assertEqual((gcode, gate["result"]), (0, "passed"), gate)
+        contracts = self.records / "website.md"
+        contracts.write_text(contracts.read_text().replace("index; canonical", "noindex; canonical"))
+        gcode, gate, _ = run("gate", verification, "--root", self.project, "--mode", "mockup", script=RECORDS)
+        self.assertEqual((gcode, gate["result"]), (1, "stale"), gate)
+
 
 class RecordTest(unittest.TestCase):
     def test_records_every_check_and_gate_reflects_them(self):

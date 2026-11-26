@@ -288,7 +288,7 @@ class RecordTest(ScratchCase):
         self.assertEqual(json.loads(evidence.read_text())["result"], "passed")
         records = json.loads(verification.read_text())["records"]
         self.assertEqual(len(records), len(report["checks"]))
-        self.assertTrue(all(r["method"] == "automated" and r["tool_and_version"] == "sw_design_check 4"
+        self.assertTrue(all(r["method"] == "automated" and r["tool_and_version"] == "sw_design_check 5"
                             for r in records))
         skipped = [r for r in records if r["result"] == "skipped"]
         self.assertTrue(skipped and all(r.get("skip_reason_when_applicable") for r in skipped))

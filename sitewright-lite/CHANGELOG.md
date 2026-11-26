@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.1 — 2026-11-26
+
+### Fixed
+
+- **Handover check (T20):** a file name with a dot (`site/404.html`) no longer ends a "create" or "build" clause, so `next_action` lines such as "Build site/404.html and site/about.html." no longer report the new files as missing. A full stop before a space still ends the clause.
+- **`meta.indexing` (T14):** only the Markdown records that hold `### Page:` contracts are recorded as inputs, so editing `HANDOVER.md` or the brief no longer makes the check stale. A change to a page contract still does.
+- **Evidence reuse (T21):** a rerun that writes a new evidence file after a pass the gate called stale ("evidence reused") is now recorded, not swallowed as unchanged, so the gate no longer stays stale in a loop. A rewritten evidence file counts as a new run even when its bytes are identical: `record` stores the file's modification time as `evidence_mtime`, and the reuse rule compares it with the earlier record's time (from the full edition's 0.5.3). The stale reason and the archive refusal now mention `--append-unchanged`.
+- **Design tokens (T18):** in `semantic_tokens`, the first value of a repeated token name is kept and the repeat is reported as a warning, instead of the last value silently winning. A value on the first nested bullet is read, and a value stops at the next bullet or label. A record field with text on its own line keeps the nested bullets under it (T18b), so tokens listed below a lead-in are no longer dropped.
+- **Page checklists (L2):** a by-hand review now keeps the note that the full edition checks an item automatically on that item's row, and only there. Each such item's heading in the checklists now ends "Pro checks this automatically", and the checklist intro and `website-verify` ask for one row per item, with exactly one of passed, failed, skipped or unavailable, and no summary of which items Pro checks. A test review had summed the notes up in one line that named two items too many.
+
+### Changed
+
+- `sw_records.py` and `sw_design_check.py` report tool version 5, and `sw_site_check.py` version 7 (its `meta.indexing` inputs changed).
+
 ## 0.4.0 — 2026-11-25
 
 ### Added
